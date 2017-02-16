@@ -1,11 +1,11 @@
 <?php 
 if(isset($_POST['action'])){
 	
-	var_dump($_POST);
+//var_dump($_POST);
 
 //1)=============Déclaration des variables=======================
 
-//$genre=trim(htmlentities($_POST['']);
+$genre=trim(htmlentities(isset($_POST['genre'])));
 $firstname=trim(htmlentities($_POST['firstname']));
 $lastname=trim(htmlentities($_POST['lastname']));
 $email=trim(htmlentities($_POST['email']));
@@ -15,22 +15,49 @@ $cp=trim(htmlentities($_POST['cp']));
 $town=trim(htmlentities($_POST['town']));;
 $tel=trim(htmlentities($_POST['tel']));
 
-echo $firstname;
+//echo $firstname;
 //2)============= Initialisation d'un tableau d'erreurs============
 $errors=[];
 
+/* if(isset($_POST['genre'])){
+	echo $genre;
+}else{
+	echo "genre n'est pas defini";
+} */
+
 //3)============= Traitement des erreurs===========================
 	//a) Champ civilité
+	if(empty($_POST['genre'])){
+		
+		$errors['genre']="la civilité n'est pas renseignée";
+		echo $errors['genre'];
+	}
 	//b) Champ prenom et nom : filter var et strlen/ preg match 
 	$toto="loulou";
-	var_dump(is_string($toto));
-	echo "lili";
+	if(empty($lastname||$firstname)){
+		$errors['identity']="Le nom ou le prénom n'ont pas été renseigné";
+		echo $errors['identity'];
+	}elseif(ctype_alpha($lastname)===false||ctype_alpha($firstname)===false){
+		$errors['string_name']="le format du nom ou prenom n'est pas conforme";
+		echo $errors['string_name'];
+	}elseif(strlen($firstname)<4 || strlen($lastname)<4 ||strlen($firstname)>20 ||strlen($lastname)>20){
+		$errors['strenth']="la taille du nom ou du prénom n'est pas conforme";
+		echo $errors['strenth'];
+	}
+	//var_dump(is_string($toto));
+	//echo "lili";
 	//if(!(is_string($firstname) || !){
 		
 	//}else{
 		
 	//}
 	//c) Champ email : filter var email 
+	if(isset($email)&&(filter_var($email,FILTER_VALIDATE_EMAIL)===false)){
+		$errors['email']="le format de l'email n'est pas valide";
+		echo $errors['email'];
+	}elseif(empty($email)){
+		$errors['emptyEmail']="Merci de communiquer votre adresse email";
+	}
 	//d) Champ password regex ou preg match
 	//e) Champ password==confirmPassword
 	//f) Champ address strlen
@@ -41,11 +68,10 @@ $errors=[];
 
 	if(empty($errors)){
 		
-	}
-
-
-	
+	}	
 }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -77,10 +103,10 @@ $errors=[];
 							<form method="POST" action="">
 							  <div class="radio">
 								<label class="radio-inline" >
-								<input type="radio" name="inlineRadioOptions"  id="exampleInputCheckbox" placeholder=""> Madame
+								<input type="radio" name="genre"  id="exampleInputCheckbox" value="Madame" placeholder=""> Madame
 								</label>
 								<label class="radio-inline">
-								<input type="radio" name="inlineRadioOptions"  id="exampleInputCheckbox2" placeholder=""> Monsieur
+								<input type="radio" name="genre" id="exampleInputCheckbox2" value="Monsieur" placeholder=""> Monsieur
 								</label>
 							  <br/>
 							  <div class="form-group" >
@@ -116,7 +142,7 @@ $errors=[];
 								<input type="text" class="form-control" id="InputTown" name="town" placeholder="">
 							  </div>
 							  <div class="form-group">
-								<label for="InputTel">Téléphone</label>
+								<label for="InputTel">TÃ©lÃ©phone</label>
 								<input type="tel" class="form-control" id="InputTel" name="tel" placeholder="">
 							  </div>
 							  <button type="submit" class="btn btn-success" name="action">Valider</button>

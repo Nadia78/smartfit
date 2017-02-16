@@ -154,7 +154,7 @@ nav a:hover {
    Author's custom styles
    ========================================================================== */
 
-input [type=radio]{
+input [type="radio"]{
 	text-decoration:bold;
 }
 

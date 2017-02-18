@@ -10,13 +10,13 @@ $firstname=trim(htmlentities($_POST['firstname']));
 $lastname=trim(htmlentities($_POST['lastname']));
 $email=trim(htmlentities($_POST['email']));
 $password=trim(htmlentities($_POST['password']));
+$confirmPassword=trim(htmlentities($_POST['confirmPassword']));
 $address=trim(htmlentities($_POST['address']));
 $cp=trim(htmlentities($_POST['cp']));
 $town=trim(htmlentities($_POST['town']));;
 $tel=trim(htmlentities($_POST['tel']));
 
-//echo $firstname;
-//2)============= Initialisation d'un tableau d'erreurs============
+//2)============= Initialisation d'un tableau d'erreurs=============
 $errors=[];
 
 /* if(isset($_POST['genre'])){
@@ -25,47 +25,67 @@ $errors=[];
 	echo "genre n'est pas defini";
 } */
 
-//3)============= Traitement des erreurs===========================
+//3)============= Traitement des erreurs============================
 	//a) Champ civilité
 	if(empty($_POST['genre'])){
 		
 		$errors['genre']="la civilité n'est pas renseignée";
-		echo $errors['genre'];
+		echo $errors['genre']."<br>";
 	}
 	//b) Champ prenom et nom : filter var et strlen/ preg match 
-	$toto="loulou";
 	if(empty($lastname||$firstname)){
 		$errors['identity']="Le nom ou le prénom n'ont pas été renseigné";
-		echo $errors['identity'];
+		echo $errors['identity']."<br>";
 	}elseif(ctype_alpha($lastname)===false||ctype_alpha($firstname)===false){
 		$errors['string_name']="le format du nom ou prenom n'est pas conforme";
-		echo $errors['string_name'];
+		echo $errors['string_name']."<br>";
 	}elseif(strlen($firstname)<4 || strlen($lastname)<4 ||strlen($firstname)>20 ||strlen($lastname)>20){
 		$errors['strenth']="la taille du nom ou du prénom n'est pas conforme";
-		echo $errors['strenth'];
+		echo $errors['strenth']."<br>";
 	}
-	//var_dump(is_string($toto));
-	//echo "lili";
-	//if(!(is_string($firstname) || !){
-		
-	//}else{
-		
-	//}
 	//c) Champ email : filter var email 
 	if(isset($email)&&(filter_var($email,FILTER_VALIDATE_EMAIL)===false)){
 		$errors['email']="le format de l'email n'est pas valide";
-		echo $errors['email'];
+		echo $errors['email']."<br>";
 	}elseif(empty($email)){
 		$errors['emptyEmail']="Merci de communiquer votre adresse email";
 	}
 	//d) Champ password regex ou preg match
+	if(!
+	preg_match('/[a-zA-Z0-9]{8}/',$password)){
+		$errors['password']="Le mot de passe doit contenir 8 caractères alphanumériques ";
+		echo $errors['password']."<br>";
+	}
 	//e) Champ password==confirmPassword
+	if($password!=$confirmPassword){
+		$errors['confirmPassword']="Les mots de passe ne sont pas identiques";
+		echo $errors['confirmPassword']."<br>";
+	}
 	//f) Champ address strlen
+	if(strlen($address)>60){
+		$errors['address']="L'adresse indiquée est trop longue";
+		echo $errors['address']."<br>";
+	}
 	//g) Champ	cp ctype digit
-	//h) Champ pregmatch number ou type number 
-
+	if(!ctype_digit($cp)){
+		$errors['cp']="Le code postal doit contenir des chiffres";
+		echo $errors['cp']."<br>";
+	}
+	//h) Champ ville
+	if(ctype_alpha($town)===false){
+		$errors['town']="La ville doit contenir uniquement des lettres";
+		echo $errors['town']."<br>";
+	}elseif(strlen($town)>20){
+		$errors['town']="Le nom de la ville est limité à 20 lettres";
+		echo $errors['town']."<br>";
+	}
+	//i) Validation du numéro de téléphone
+	
+	if(!preg_match('/^0[0-9]{9}/',$tel)){
+		$errors['tel']="Le numéro du téléphone doit commencer par 0, 00 ou + et doit contenir des chiffres";
+		echo $errors['tel'];
+	}
 //4)Si pas d'erreurs, insertion dans la bdd
-
 	if(empty($errors)){
 		
 	}	

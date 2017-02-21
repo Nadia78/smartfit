@@ -49,6 +49,19 @@ $errors=[];
 		echo $errors['email']."<br>";
 	}elseif(empty($email)){
 		$errors['emptyEmail']="Merci de communiquer votre adresse email";
+	}else{
+		// Je vérifie si l'email n'existe pas déjà dans la bdd
+		$query=$pdo->prepare('SELECT FROM users WHERE email=:email');
+		$query->bindValue(':email',$email,PDO::PARAM_STR);
+		$query->execute();
+		// Je récupère le résultat de la bdd Sql
+		$resultEmail=$query->fetch();
+		
+	if($resultEmail['email']){
+		$errors['email']="L'email existe déjà";
+		echo $errors['email'];
+	}
+		
 	}
 	//d) Champ password regex ou preg match
 	if(!

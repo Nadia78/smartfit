@@ -101,7 +101,17 @@ $errors=[];
 //4)Si pas d'erreurs, insertion dans la bdd
 	if(empty($errors)){
 		
-	}	
+	}
+if(empty($errors))	{
+	// hasher le password
+	$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+	// Le tableau d'erreurs est vide, insérer les informations de l'utilisateur dans la bdd
+	$query=$pdo->prepare('INSERT INTO users gender firstname lastname' );
+	
+	$query->binValue(':gender',$genre,':firtsname',$firstname,':lastname',$lastname,':email',$email,':password',$password,':address',$address,':cp',$cp,':town',$town,':tel',$tel);
+	
+	$query->execute();
+}
 }
 
 

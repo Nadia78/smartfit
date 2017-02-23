@@ -1,4 +1,7 @@
 <?php 
+
+require(__DIR__.'/config/db.php');
+
 if(isset($_POST['action'])){
 	
 //var_dump($_POST);
@@ -51,14 +54,14 @@ $errors=[];
 		$errors['emptyEmail']="Merci de communiquer votre adresse email";
 	}else{
 		// Je vérifie si l'email n'existe pas déjà dans la bdd
-		$query=$pdo->prepare('SELECT FROM users WHERE email=:email');
+		$query=$pdo->prepare('SELECT email FROM users WHERE email = :email');
 		$query->bindValue(':email',$email,PDO::PARAM_STR);
 		$query->execute();
 		// Je récupère le résultat de la bdd Sql
 		$resultEmail=$query->fetch();
 		
 	if($resultEmail['email']){
-		$errors['email']="L'email existe déjà";
+		$errors['email']="L \'email existe déjà";
 		echo $errors['email'];
 	}
 		
@@ -106,9 +109,17 @@ if(empty($errors))	{
 	// hasher le password
 	$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 	// Le tableau d'erreurs est vide, insérer les informations de l'utilisateur dans la bdd
-	$query=$pdo->prepare('INSERT INTO users gender firstname lastname' );
+	$query=$pdo->prepare('INSERT INTO users(firstname,lastname,address,email,cp,town,tel) VALUES(:firstname,:lastname,:address,:email,:cp,:town,:tel)' );
 	
-	$query->binValue(':gender',$genre,':firtsname',$firstname,':lastname',$lastname,':email',$email,':password',$password,':address',$address,':cp',$cp,':town',$town,':tel',$tel);
+	//$query->bindValue(':gender',$genre,PDO::PARAM_STR);
+	$query->bindValue(':firtsname',$firstname,PDO::PARAM_STR);
+	$query->bindValue(':lastname',$lastname,PDO::PARAM_STR);
+	$query->bindValue(':email',$email,PDO::PARAM_STR);
+	$query->bindValue(':password',$password,PDO::PARAM_STR);
+	$query->bindValue(':address',$address,PDO::PARAM_STR);
+	$query->bindValue(':cp',$cp,PDO::PARAM_INT);
+	$query->bindValue(':town',$town,PDO::PARAM_STR);
+	$query->bindValue(':tel',$tel,PDO::PARAM_INT);
 	
 	$query->execute();
 }

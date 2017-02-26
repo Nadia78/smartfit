@@ -109,9 +109,18 @@ if(empty($errors))	{
 	// hasher le password
 	$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 	// Le tableau d'erreurs est vide, insérer les informations de l'utilisateur dans la bdd
-	$query=$pdo->prepare('INSERT INTO users(firstname,lastname,address,email,cp,town,tel) VALUES(:firstname,:lastname,:address,:email,:cp,:town,:tel)' );
-	
-	//$query->bindValue(':gender',$genre,PDO::PARAM_STR);
+	//users(nom_colonnes) values($)
+	$query=$pdo->prepare("INSERT INTO users(gender,firstname,lastname,address,email,cp,town,tel) VALUES(':gender',
+	':firstname',
+	':lastname',
+	':address',
+	':email',
+	:cp,
+	':town',
+	:tel)");
+
+	var_dump($query);
+	/*$query->bindValue(':gender',$genre,PDO::PARAM_STR);
 	$query->bindValue(':firtsname',$firstname,PDO::PARAM_STR);
 	$query->bindValue(':lastname',$lastname,PDO::PARAM_STR);
 	$query->bindValue(':email',$email,PDO::PARAM_STR);
@@ -119,7 +128,17 @@ if(empty($errors))	{
 	$query->bindValue(':address',$address,PDO::PARAM_STR);
 	$query->bindValue(':cp',$cp,PDO::PARAM_INT);
 	$query->bindValue(':town',$town,PDO::PARAM_STR);
-	$query->bindValue(':tel',$tel,PDO::PARAM_INT);
+	$query->bindValue(':tel',$tel,PDO::PARAM_INT);*/
+	
+	$query->bindValue(':gender',$genre);
+	$query->bindValue(':firtsname',$firstname);
+	$query->bindValue(':lastname',$lastname);
+	$query->bindValue(':email',$email);
+	$query->bindValue(':password',$password);
+	$query->bindValue(':address',$address);
+	$query->bindValue(':cp',$cp);
+	$query->bindValue(':town',$town);
+	$query->bindValue(':tel',$tel);
 	
 	$query->execute();
 }

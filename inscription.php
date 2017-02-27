@@ -110,28 +110,46 @@ if(empty($errors))	{
 	$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 	// Le tableau d'erreurs est vide, insérer les informations de l'utilisateur dans la bdd
 	//users(nom_colonnes) values($)
-	$query=$pdo->prepare("INSERT INTO users(gender,firstname,lastname,password,address,email,cp,town,tel) VALUES(':gender',
-	':firstname',
-	':lastname',
-	':password',
-	':address',
-	':email',
+	$query=$pdo->prepare('INSERT INTO users(gender,firstname,lastname,email,password,address,cp,town,tel) VALUES(:gender,:firstname,:lastname,:email,
+	:password,
+	:address,
 	:cp,
-	':town',
-	:tel)");
-
-	//var_dump($query);
+	:town,
+	:tel)');
+	
 	$query->bindValue(':gender',$genre,PDO::PARAM_STR);
-	$query->bindValue(':firtsname',$firstname,PDO::PARAM_STR);
+	$query->bindValue(':firstname',$firstname,PDO::PARAM_STR);
 	$query->bindValue(':lastname',$lastname,PDO::PARAM_STR);
-	$query->bindValue(':password',$hashedPassword,PDO::PARAM_STR);
 	$query->bindValue(':email',$email,PDO::PARAM_STR);
+	$query->bindValue(':password',$hashedPassword,PDO::PARAM_STR);
 	$query->bindValue(':address',$address,PDO::PARAM_STR);
 	$query->bindValue(':cp',$cp,PDO::PARAM_INT);
 	$query->bindValue(':town',$town,PDO::PARAM_STR);
 	$query->bindValue(':tel',$tel,PDO::PARAM_INT);
 	
+	//var_dump($genre,$firstname,$lastname,$hashedPassword,$email,$address,$cp,$town,$tel);
+	
 	$query->execute();
+	
+	if($query){
+		echo '<div class="alert alert-success" role="alert">Bravo ! Vous avez bien été enregistré !</div>';
+	}
+	if($query->rowCount>0){
+		// Récupérer l'utilisateur dans la bdd pou l'affecter à une valeur de session
+		$query=$pdo->prepare('SELECT * FROM users WHERE id=:id');
+		$query=bindValue(':id',$pdo->lastInsertId(),PDO::PARAM_INT);
+		$query->execute();
+		$resultUser=$query->fetch();
+		
+		// Stocker le user mais retirer le mot de passe avant
+		unset($resultUser['password']);
+		$_SESSION['users']=$resultUser;
+		
+		//on redirige l'internaute vers la page protégée catalogue.php
+		header("Location: catalogue.php");
+		die();
+		
+	}
 }
 }
 

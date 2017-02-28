@@ -1,5 +1,6 @@
 <?php 
 
+include 'header.php';
 require(__DIR__.'/config/db.php');
 
 if(isset($_POST['action'])){
@@ -155,29 +156,6 @@ if(empty($errors))	{
 
 
 ?>
-
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Inscription Smartfit</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-        <link rel="stylesheet" href="css/main.css">
-
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    </head>
-		<body>
-			
 				<div class="row">
 					<div class="col-md-4"></div>
 						<div class="col-md-4">
@@ -233,5 +211,5 @@ if(empty($errors))	{
 						</div>
 					<div class="col-md-4"></div>
 				</div>
-		</body>
-	</html>
+<?php include'footer.php';
+?>

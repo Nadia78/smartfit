@@ -1,37 +1,7 @@
-<!doctype html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>smartfit présentation</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/main.css">
-
-        <!--[if lt IE 9]>
-            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-            <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
-        <![endif]-->
-		
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    </head>
-    <body>
-
-        <div class="header-container">
-            <header class="wrapper clearfix">
-                <h1 class="title">Smartfit : le programme de fitness intelligent</h1>
-                <nav>
-                    <ul>
-                        <li><a href="inscription.php">Inscription</a></li>
-                        <li><a href="#">Connexion</a></li>
-                        <li><a href="#">Produits</a></li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
+<?php
+include 'header.php';
+?>
 
         <div class="main-container">
             <div class="main wrapper clearfix">
@@ -68,16 +38,6 @@
 
             </div> <!-- #main -->
         </div> <!-- #main-container -->
-
-        <div class="footer-container">
-            <footer class="wrapper">
-                <h3>Copyright &copy;</h3>
-            </footer>
-        </div>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-
-        <script src="js/main.js"></script>
-    </body>
-</html>
+<?php
+include'footer.php';
+?>

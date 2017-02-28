@@ -157,6 +157,9 @@ nav a:hover {
 input [type="radio"]{
 	text-decoration:bold;
 }
+h{
+	text-decoration:underline;
+}
 
 
 

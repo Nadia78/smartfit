@@ -9,11 +9,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title><?php 
 		$url=$_SERVER['PHP_SELF'];
-		$pattern='#^(.+[\\\/])*([^\\\/]+)$#';
-		$remplacement='$2';
-		
-		echo preg_replace($pattern, $remplacement, $url);
-
+		$url2=ucwords(ereg_replace("/smartfit/"," ",$url));
+		$url3=ereg_replace(".php"," ","$url2");
+		if($url3=="Index"){
+			echo "Presentation";
+		}else{
+			echo $url3;
+		}
+		//$pattern='#^(.+[\\\/])*([^\\\/]+)$#';
+		//$r='$2';
+		//echo pereg_replace(".php",$r,"$url");
 		?></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,7 +36,8 @@
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body>
-
+		<?php
+		?>
         <div class="header-container">
             <header class="wrapper clearfix">
                 <h1 class="title">Smartfit : le programme de fitness intelligent</h1>

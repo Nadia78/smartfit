@@ -148,69 +148,65 @@ if(empty($errors))	{
 		
 		//on redirige l'internaute vers la page prot�g�e catalogue.php
 		header("Location: catalogue.php");
-		die();
-		
+		die();	
 	}
 }
 }
-
-
 ?>
-				<div class="row">
-					<div class="col-md-4"></div>
-						<div class="col-md-4">
-							<h1>Inscription</h1>
-							<form method="POST" action="">
-							  <div class="radio">
-								<label class="radio-inline" >
-								<input type="radio" name="genre"  id="exampleInputCheckbox" value="Madame" placeholder=""> Madame
-								</label>
-								<label class="radio-inline">
-								<input type="radio" name="genre" id="exampleInputCheckbox2" value="Monsieur" placeholder=""> Monsieur
-								</label>
-							  </div>
-							  <br/>
-							  <div class="form-group" >
-								<label for="Inputfirstname">Prénom</label>
-								<input type="text" class="form-control" id="Inputfirstname" name="firstname" placeholder="">
-							  </div>
-							  <div class="form-group">
-								<label for="InputLastname">Nom</label>
-								<input type="text" class="form-control" id="InputLastname" name="lastname" placeholder="">
-							  </div>
-							  <div class="form-group">
-								<label for="InputEmail">Email address</label>
-								<input type="email" class="form-control" id="InputEmail" name="email" placeholder="">
-							  </div>
-							  <div class="form-group">
-								<label for="InputPassword">Password</label>
-								<input type="password" class="form-control" id="InputPassword" name="password" placeholder="">
-							  </div>
-							  <div class="form-group">
-								<label for="InputConfirmPassword1">ConfirmPassword</label>
-								<input type="password" class="form-control" id="InputConfirmPassword" name="confirmPassword" placeholder="">
-							  </div>
-							  <div class="form-group">
-								<label for="InputAddress">Adresse</label>
-								<input type="text" class="form-control" id="InputAddress" name="address" placeholder="">
-							  </div>
-							  <div class="form-group">
-								<label for="InputZipcode">Code Postal</label>
-								<input type="text" class="form-control" id="InputZipcode" name="cp" placeholder="">
-							  </div>
-							  <div class="form-group">
-							  <label for="InputTown">Ville</label>
-								<input type="text" class="form-control" id="InputTown" name="town" placeholder="">
-							  </div>
-							  <div class="form-group">
-								<label for="InputTel">Téléphone</label>
-								<input type="tel" class="form-control" id="InputTel" name="tel" placeholder="">
-							  </div>
-							  <button type="submit" class="btn btn-success" name="action">Valider</button>
-							</form>
-							</div>
-						</div>
-					<div class="col-md-4"></div>
-				</div>
+<div class="row">
+	<div class="col-md-4"></div>
+		<div class="col-md-4">
+			<h1>Inscription</h1>
+			<form method="POST" action="">
+			  <div class="radio">
+				<label class="radio-inline" >
+					<input type="radio" name="genre"  id="exampleInputCheckbox" value="Madame" placeholder=""> Madame
+				</label>
+				<label class="radio-inline">
+				<input type="radio" name="genre" id="exampleInputCheckbox2" value="Monsieur" placeholder=""> Monsieur
+				</label>
+			  </div>
+			  <br/>
+			  <div class="form-group" >
+				<label for="Inputfirstname">Prénom</label>
+				<input type="text" class="form-control" id="Inputfirstname" name="firstname" placeholder="">
+			  </div>
+			  <div class="form-group">
+				<label for="InputLastname">Nom</label>
+				<input type="text" class="form-control" id="InputLastname" name="lastname" placeholder="">
+			  </div>
+			  <div class="form-group">
+				<label for="InputEmail">Email address</label>
+				<input type="email" class="form-control" id="InputEmail" name="email" placeholder="">
+			  </div>
+			  <div class="form-group">
+				<label for="InputPassword">Password</label>
+				<input type="password" class="form-control" id="InputPassword" name="password" placeholder="">
+			  </div>
+			  <div class="form-group">
+				<label for="InputConfirmPassword1">ConfirmPassword</label>
+				<input type="password" class="form-control" id="InputConfirmPassword" name="confirmPassword" placeholder="">
+			  </div>
+			  <div class="form-group">
+				<label for="InputAddress">Adresse</label>
+				<input type="text" class="form-control" id="InputAddress" name="address" placeholder="">
+			  </div>
+			  <div class="form-group">
+				<label for="InputZipcode">Code Postal</label>
+				<input type="text" class="form-control" id="InputZipcode" name="cp" placeholder="">
+			  </div>
+			  <div class="form-group">
+			  <label for="InputTown">Ville</label>
+				<input type="text" class="form-control" id="InputTown" name="town" placeholder="">
+			  </div>
+			  <div class="form-group">
+				<label for="InputTel">Téléphone</label>
+				<input type="tel" class="form-control" id="InputTel" name="tel" placeholder="">
+			  </div>
+			  <button type="submit" class="btn btn-success" name="action">Valider</button>
+			</form>
+		</div>
+</div>
+	<div class="col-md-4"></div>
 <?php include'footer.php';
 ?>

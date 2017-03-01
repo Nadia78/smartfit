@@ -8,6 +8,22 @@ include 'header.php';
 
                 <article>
 					<form>
+						 <div class="radio">
+								<label class="radio-inline" >
+								<input type="radio" name="genre"  id="exampleInputCheckbox" value="Madame" placeholder=""> Femme
+								</label>
+								<label class="radio-inline">
+								<input type="radio" name="genre" id="exampleInputCheckbox2" value="Monsieur" placeholder=""> Homme
+								</label>
+						  </div>
+						  <div class="form-group">
+							<label for="exampleInputPassword1">Alimentation</label>
+							<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+						  </div>
+						  <div class="form-group">
+							<label for="exampleInputPassword1">Tranche d'âge</label>
+							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+						  </div>
 						  <div class="form-group">
 							<label for="exampleInputEmail1">Poids</label>
 							<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
@@ -17,9 +33,24 @@ include 'header.php';
 							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
 						  </div>
 						  <div class="form-group">
-							<label for="exampleInputFile">Commentaires</label>
-							<input type="text" id="">
-							<p class="help-block">Example block-level help text here.</p>
+							<label for="exampleInputPassword1">Activités</label>
+							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+						  </div>
+						  <div class="form-group">
+							<label for="exampleInputPassword1">Alimentation</label>
+							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+						  </div>
+						  <div class="form-group">
+							<label for="exampleInputPassword1">Moyen de transport</label>
+							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+						  </div>
+						   <div class="form-group">
+							<label for="exampleInputPassword1">Temps de transport</label>
+							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+						  </div>
+						  <div class="form-group">
+							<label for="exampleInputPassword1">Objectif(s)</label>
+							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
 						  </div>
 						  <div class="checkbox">
 							<label>

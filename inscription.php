@@ -168,6 +168,7 @@ if(empty($errors))	{
 								<label class="radio-inline">
 								<input type="radio" name="genre" id="exampleInputCheckbox2" value="Monsieur" placeholder=""> Monsieur
 								</label>
+							  </div>
 							  <br/>
 							  <div class="form-group" >
 								<label for="Inputfirstname">Prénom</label>

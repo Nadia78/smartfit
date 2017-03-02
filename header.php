@@ -11,7 +11,7 @@
 		$url=$_SERVER['PHP_SELF'];
 		$url2=ucwords(ereg_replace("/smartfit/"," ",$url));
 		$url3=ereg_replace(".php"," ","$url2");
-		if($url3=="Index"){
+		if($url3=="index"){
 			echo "Presentation";
 		}else{
 			echo $url3;

@@ -135,7 +135,7 @@ if(empty($errors))	{
 	if($query){
 		echo '<div class="alert alert-success" role="alert">Bravo ! Vous avez bien été enregistré !</div>';
 	}
-	if($query->rowCount>0){
+	if($query->rowCount()>0){
 		// Récupérer l'utilisateur dans la bdd pou l'affecter à une valeur de session
 		$query=$pdo->prepare('SELECT * FROM users WHERE id=:id');
 		$query=bindValue(':id',$pdo->lastInsertId(),PDO::PARAM_INT);

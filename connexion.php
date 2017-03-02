@@ -2,7 +2,7 @@
  
  //define('pagencours', $_SERVER['PHP_SELF'], true);
  //echo $_SERVER['SERVER_SELF'];
- echo basename(__FILE__);
+ //echo basename(__FILE__);
 ?> 
 
    <div class="formConnexion col-md-4 col-md-offset-4">

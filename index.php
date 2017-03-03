@@ -18,7 +18,7 @@ include 'header.php';
 					<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
 				</div>
 				 <div class="form-group">
-					<label for="exampleInputPassword1">Tranche d'Ã¢ge</label>
+					<label for="exampleInputPassword1">Tranche d'âge</label>
 					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
 				</div>
 				<div class="form-group">
@@ -30,7 +30,7 @@ include 'header.php';
 					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputPassword1">ActivitÃ©s</label>
+					<label for="exampleInputPassword1">Activités</label>
 					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
 				</div>
 				<div class="form-group">

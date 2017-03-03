@@ -11,7 +11,8 @@
 		$url=$_SERVER['PHP_SELF'];
 		$url2=ucwords(ereg_replace("/smartfit/"," ",$url));
 		$url3=ereg_replace(".php"," ","$url2");
-		if($url3=="index"){
+		$url4=trim($url3);
+		if($url=="/smartfit/index.php"){
 			echo "Presentation";
 		}else{
 			echo $url3;
@@ -37,6 +38,11 @@
     </head>
     <body>
 		<?php
+		echo $url."<br>";
+		echo $url2."<br>";
+		echo $url3.$url2;
+
+
 		?>
         <div class="header-container">
             <header class="wrapper clearfix">
@@ -45,7 +51,11 @@
                     <ul>
                         <li><a href="index.php">Accueil</a></li>
                         <li><a href="inscription.php">Inscription</a></li>
-                        <li><a href="connexion.php">Connexion</a></li>
+						<?php if($url=="/smartfit/catalogue.php"){
+							echo '<li><a href="logout.php">Déconnexion</a></li>';
+						}else{
+							echo '<li><a href="connexion.php">Connexion</a></li>';
+						}?>		
                     </ul>
                 </nav>
             </header>

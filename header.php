@@ -38,11 +38,6 @@
     </head>
     <body>
 		<?php
-		echo $url."<br>";
-		echo $url2."<br>";
-		echo $url3.$url2;
-
-
 		?>
         <div class="header-container">
             <header class="wrapper clearfix">

@@ -69,6 +69,7 @@ include 'header.php';
         </aside>
     </div> <!-- #main -->
   </div> <!-- #main-container -->
+  <script src="js/main.js"></script>
 <?php
 include'footer.php';
 ?>

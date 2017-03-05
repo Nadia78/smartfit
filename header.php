@@ -53,4 +53,15 @@
             </header>
         </div>
 			<br>
-			<div id="dateHeure">Nous sommes </div>
+			<div id="dateHeure">
+			<script langage="Javascript">
+				var date = new Date();
+	
+				var jour=date.getDate();
+				var mois=date.getMonth();
+				var heure=date.getHours();
+				var minutes=date.getMinutes();
+				var annee = date.getFullYear();
+				document.write("Nous sommes le "+jour+" "+mois+" "+annee+", il est"+heure+"h"+minutes );
+			</script>
+			</div>

@@ -63,6 +63,6 @@
 				var heure=date.getHours();
 				var minutes=date.getMinutes();
 				var annee = date.getFullYear();
-				document.write("Nous sommes le "+jour+" "+mois+" "+annee+", il est "+heure+"h"+minutes );
+				document.write("Nous sommes le "+jour+"/"+mois+"/"+annee+", il est "+heure+"h"+minutes );
 			</script>
 			</div>

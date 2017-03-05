@@ -18,6 +18,8 @@ function AfficheLaDate(){
 	return resultat;
 }
 
+// ins?rer setTimeout pour rafra?chir 
+
 
 
 

@@ -7,6 +7,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<META HTTP-EQUIV="refresh" CONTENT="30">
         <title><?php 
 		$url=$_SERVER['PHP_SELF'];
 		$url2=ucwords(ereg_replace("/smartfit/"," ",$url));
@@ -58,10 +59,10 @@
 				var date = new Date();
 	
 				var jour=date.getDate();
-				var mois=date.getMonth();
+				var mois=date.getMonth()+1;
 				var heure=date.getHours();
 				var minutes=date.getMinutes();
 				var annee = date.getFullYear();
-				document.write("Nous sommes le "+jour+" "+mois+" "+annee+", il est"+heure+"h"+minutes );
+				document.write("Nous sommes le "+jour+" "+mois+" "+annee+", il est "+heure+"h"+minutes );
 			</script>
 			</div>

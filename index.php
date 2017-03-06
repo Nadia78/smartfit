@@ -17,10 +17,13 @@ include 'header.php';
 					<label for="exampleInputPassword1">Repartition alimentation en %</label>
 					<div class="row">
 						<div class="col-xs-2">
-							<input list="liste" type="text" class="form-control" id="exampleInputPassword1" placeholder="">
-							<input list="liste" type="text" class="form-control" id="exampleInputPassword1" placeholder="">
-							<input list="liste" type="text" class="form-control" id="exampleInputPassword1" placeholder="">
-							<input list="liste" type="text" class="form-control" id="exampleInputPassword1" placeholder="">	
+							<input id="liste" type="text" class="form-control" id="exampleInputPassword1" placeholder="">
+							<br>
+							<input id="liste" type="text" class="form-control" id="exampleInputPassword1" placeholder="">
+							<br>
+							<input id="liste" type="text" class="form-control" id="exampleInputPassword1" placeholder="">
+							<br>
+							<input id="liste" type="text" class="form-control" id="exampleInputPassword1" placeholder="">	
 						</div>
 					</div>
 					<br>
@@ -54,7 +57,7 @@ include 'header.php';
 					<input type="text" class="form-control" id="exampleInputPassword1" placeholder="text">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputPassword1">Temps consacré</label>
+					<label for="exampleInputPassword1">Temps consacre</label>
 					<input type="text" class="form-control" id="exampleInputPassword1" placeholder="text">
 				</div>
 
@@ -75,7 +78,7 @@ include 'header.php';
 					  <input type="checkbox"> Check me out
 					</label>
 				</div>
-			  <button type="submit" class="btn btn-default">Submit</button>
+			  <button type="submit" class="btn btn-success">Submit</button>
 			</form>         
         </article>
         <aside>

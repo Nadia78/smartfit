@@ -42,13 +42,13 @@ if(isset($_POST['submit'])){
 					<label for="">Repartition alimentation en %</label>
 					<div class="row">
 						<div class="col-xs-2">
-							<input id="liste1" type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder="" onchange="CalculRepartAliments();">
+							<input id="liste1" type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder="" value="0" onchange="CalculRepartAliments();">
 							<br>
-							<input id="liste2" type="text" class="form-control" placeholder="" onchange="CalculRepartAliments();">
+							<input id="liste2" type="text" class="form-control" placeholder="" value="0" onchange="CalculRepartAliments();">
 							<br>
-							<input id="liste3" type="text" class="form-control" placeholder="" onchange="CalculRepartAliments();">
+							<input id="liste3" type="text" class="form-control" placeholder=""  value="0"onchange="CalculRepartAliments();">
 							<br>
-							<input id="liste4" type="text" class="form-control" placeholder="" onchange="CalculRepartAliments();">
+							<input id="liste4" type="text" class="form-control" placeholder=""  value="0"onchange="CalculRepartAliments();">
 							<div>= 100%</div>
 						</div>
 					</div>

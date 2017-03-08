@@ -42,14 +42,20 @@ function CalculRepartAliments(){
 	var liste3=parseInt((document.getElementById('liste3').value),10);
 	var liste4=parseInt((document.getElementById('liste4').value),10);
 	
+	
 	if(liste1!=null || liste1!="undefined"){
-		document.getElementById('liste2').value=100-document.getElementById('liste1').value;
+		document.getElementById('liste2').value=(100-document.getElementById('liste1').value)/3;
+		document.getElementById('liste3').value=(100-document.getElementById('liste1').value)/3;
+		document.getElementById('liste4').value=(100-document.getElementById('liste1').value)/3;
 	}
 	else if(liste1!=null || liste1!="undefined" && liste2!=null || liste2!="undefined"){
-		document.getElementById('liste3').value=100-(document.getElementById('liste1').value)+(document.getElementById('liste3').value);
+		//document.getElementById('liste3').value=100-(document.getElementById('liste1').value)+(document.getElementById('liste3').value);
 	}
 	else{
-		
+/* 		var liste1=null;
+		var liste2=null;
+		var liste3=null;
+		var liste4=null; */
 	}
 	//else if(liste1!=null || liste1!="undefined" && liste2!=null || liste2!="undefined"&& liste3!=null || liste3!="undefined")
 /* 	switch case (){

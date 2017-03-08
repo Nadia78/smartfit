@@ -7,7 +7,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<META HTTP-EQUIV="refresh" CONTENT="30">
+		<!--<META HTTP-EQUIV="refresh" CONTENT="30">-->
         <title><?php 
 		$url=$_SERVER['PHP_SELF'];
 		$url2=ucwords(ereg_replace("/smartfit/"," ",$url));

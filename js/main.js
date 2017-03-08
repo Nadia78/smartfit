@@ -38,11 +38,23 @@ console.log("ok");
 function CalculRepartAliments(){
 	
 	var liste1=parseInt((document.getElementById('liste1').value),10);
-	var liste2=document.getElementById('liste2').value;
-	var liste3=document.getElementById('liste3').value;
-	var liste4=document.getElementById('liste4').value;
+	var liste2=parseInt((document.getElementById('liste2').value),10);
+	var liste3=parseInt((document.getElementById('liste3').value),10);
+	var liste4=parseInt((document.getElementById('liste4').value),10);
 	
 	if(liste1!=null || liste1!="undefined"){
-		document.getElementById('liste2').value=100-(document.getElementById('liste1').value);
+		document.getElementById('liste2').value=100-document.getElementById('liste1').value;
 	}
+	else if(liste1!=null || liste1!="undefined" && liste2!=null || liste2!="undefined"){
+		document.getElementById('liste3').value=100-(document.getElementById('liste1').value)+(document.getElementById('liste3').value);
+	}
+	else{
+		
+	}
+	//else if(liste1!=null || liste1!="undefined" && liste2!=null || liste2!="undefined"&& liste3!=null || liste3!="undefined")
+/* 	switch case (){
+		case
+		case 
+		case 
+	} */
 }

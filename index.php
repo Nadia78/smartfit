@@ -46,9 +46,9 @@ if(isset($_POST['submit'])){
 							<br>
 							<input id="liste2" type="text" class="form-control" placeholder="" onchange="CalculRepartAliments();">
 							<br>
-							<input id="liste3" type="text" class="form-control" placeholder="" onchange="">
+							<input id="liste3" type="text" class="form-control" placeholder="" onchange="CalculRepartAliments();">
 							<br>
-							<input id="liste4" type="text" class="form-control" placeholder="" onchange="">
+							<input id="liste4" type="text" class="form-control" placeholder="" onchange="CalculRepartAliments();">
 							<div>= 100%</div>
 						</div>
 					</div>

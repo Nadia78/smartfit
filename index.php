@@ -37,10 +37,12 @@ if(isset($_POST['submit'])){
 						<input type="radio" name="genre" id="radMen" value="Monsieur" placeholder=""> Homme
 					</label>
 				</div>
+				
 				<div class="form-group">
 					<label for="">Repartition alimentation en %</label>
 					<div class="row">
-						<div class="col-xs-2">
+						<div class="col-sm-4">
+							<label></label>
 							<input id="liste1" type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder="">
 							<br>
 							<input id="liste2" type="text" class="form-control" placeholder="">
@@ -83,7 +85,7 @@ if(isset($_POST['submit'])){
 				</div>
 				</div>
 				<div class="form-group">
-					<label for="nameSport">Nature du sport pratique</label>
+					<label for="nameSport">Nature du sport pratique par semaine</label>
 					<select class="form-control" id="nameSport">
 						<option value="viande">
 						<option>Cardio : course a pied, vélo,piscine</option>
@@ -121,7 +123,7 @@ if(isset($_POST['submit'])){
 						<option value="1">Grossir</option>
 						<option value="2">Muscler</option>
 						<option value="3">Etre en forme</option>
-						<option value="4">Améliorer ma santé</option>
+						<option value="4">Ameliorer ma sante(digestion, douleurs musculaires, nevralgies...)</option>
 					</select>
 				</div>
 				<div class="checkbox">

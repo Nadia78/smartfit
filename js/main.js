@@ -41,9 +41,8 @@ function CalculRepartAliments(){
 	var liste2=parseInt((document.getElementById('liste2').value),10);
 	var liste3=parseInt((document.getElementById('liste3').value),10);
 	var liste4=parseInt((document.getElementById('liste4').value),10);
-	
-	
-	if(liste1!=null || liste1!="undefined"){
+
+/* 	if(liste1!=null || liste1!="undefined"){
 		document.getElementById('liste2').value=(100-document.getElementById('liste1').value)/3;
 		document.getElementById('liste3').value=(100-document.getElementById('liste1').value)/3;
 		document.getElementById('liste4').value=(100-document.getElementById('liste1').value)/3;
@@ -52,11 +51,16 @@ function CalculRepartAliments(){
 		//document.getElementById('liste3').value=100-(document.getElementById('liste1').value)+(document.getElementById('liste3').value);
 	}
 	else{
-/* 		var liste1=null;
-		var liste2=null;
-		var liste3=null;
-		var liste4=null; */
-	}
+
+	} */
+	
+	// .value=nombre4-(nombre!=0);
+	// var compteur=0; qui quantifie les valeurs diff de 0
+	var entry ="";
+	var i=5;
+	do {
+		
+	}while(liste1!=0 ||liste2!=0||liste3!=0||liste2!=0);
 	//else if(liste1!=null || liste1!="undefined" && liste2!=null || liste2!="undefined"&& liste3!=null || liste3!="undefined")
 /* 	switch case (){
 		case

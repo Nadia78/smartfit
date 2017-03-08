@@ -41,15 +41,14 @@ if(isset($_POST['submit'])){
 				<div class="form-group">
 					<label for="">Repartition alimentation en %</label>
 					<div class="row">
-						<div class="col-sm-4">
-							<label></label>
-							<input id="liste1" type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder="">
+						<div class="col-xs-2">
+							<input id="liste1" type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder="" onchange="CalculRepartAliments();">
 							<br>
-							<input id="liste2" type="text" class="form-control" placeholder="">
+							<input id="liste2" type="text" class="form-control" placeholder="" onchange="CalculRepartAliments();">
 							<br>
-							<input id="liste3" type="text" class="form-control" placeholder="">
+							<input id="liste3" type="text" class="form-control" placeholder="" onchange="">
 							<br>
-							<input id="liste4" type="text" class="form-control" placeholder="">
+							<input id="liste4" type="text" class="form-control" placeholder="" onchange="">
 							<div>= 100%</div>
 						</div>
 					</div>

@@ -1,7 +1,7 @@
-//1.r?cup?rer la valeur du bouton radio 
+//1.recuperer la valeur du bouton radio 
 
 
-//2.r?cup?rer la date, id="dateHeure"
+//2.recuperer la date, id="dateHeure"
 
 function AfficheLaDate(){
 	
@@ -18,7 +18,7 @@ function AfficheLaDate(){
 	return resultat;
 }
 
-// TODO ins?rer setTimeout pour rafra?chir 
+// TODO inserer setTimeout pour rafraichir 
 
 //3.afficher un ensemble en fonction de la value d'un select, ou d'une case coch?e
 

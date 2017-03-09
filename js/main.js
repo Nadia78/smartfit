@@ -32,20 +32,25 @@ function AfficheLaDate(){
 
 //1. R?cup?rer les derni?res valeurs saisies
 function recupVal(id){
-	if(document.getElementById(id).value!=0)
-	console.log(document.getElementById(id).value);
+	
+	if(document.getElementById(id).value){
+		var tabValeursSaisies=[];
+			var valeursSaisies=document.getElementById(id).value;
+			
+			console.log(valeursSaisies);
+		
+				tabValeursSaisies.push(valeursSaisies);
+				console.log(tabValeursSaisies);
+		
+	}
+	
 }
 
-//2. stocker les valeurs dans un tableau ? 4 ?l?ments 
+//2. stocker les valeurs dans un tableau ? 4 ?l?ments et r?cup?rer les 4 derniers ?l?ments pour faire le calcul
 
 
 //3. Effectuer le calcul de la r?partiion en fonction des valeurs saisies allant jusqu'? 4 et conserver les derni?res valeurs
 function CalculRepartAliments(){
-	
-	var liste1=parseInt((document.getElementById('liste1').value),10);
-	var liste2=parseInt((document.getElementById('liste2').value),10);
-	var liste3=parseInt((document.getElementById('liste3').value),10);
-	var liste4=parseInt((document.getElementById('liste4').value),10);
 
 /* 	if(liste1!=null || liste1!="undefined"){
 		document.getElementById('liste2').value=(100-document.getElementById('liste1').value)/3;

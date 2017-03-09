@@ -18,8 +18,7 @@ function AfficheLaDate(){
 	return resultat;
 }
 
-// ins?rer setTimeout pour rafra?chir 
-
+// TODO ins?rer setTimeout pour rafra?chir 
 
 //3.afficher un ensemble en fonction de la value d'un select, ou d'une case coch?e
 
@@ -27,14 +26,20 @@ function AfficheLaDate(){
 
 //5. stocker une fonction dans un bouton pour afficher le password 
 
+//END TODO
 
-var ty="123";
-var op="jjj";
+//*****************Calcul automatique de la r?partition des proportions ***********************************************************************
 
-var tab = ("et","rt");
-//alert("ok");
-console.log("ok");
+//1. R?cup?rer les derni?res valeurs saisies
+function recupVal(id){
+	if(document.getElementById(id).value!=0)
+	console.log(document.getElementById(id).value);
+}
 
+//2. stocker les valeurs dans un tableau ? 4 ?l?ments 
+
+
+//3. Effectuer le calcul de la r?partiion en fonction des valeurs saisies allant jusqu'? 4 et conserver les derni?res valeurs
 function CalculRepartAliments(){
 	
 	var liste1=parseInt((document.getElementById('liste1').value),10);
@@ -56,15 +61,15 @@ function CalculRepartAliments(){
 	
 	// .value=nombre4-(nombre!=0);
 	// var compteur=0; qui quantifie les valeurs diff de 0
-	var entry ="";
-	var i=5;
+		
+	}
+/* 	var i=5;
 	do {
 		
-	}while(liste1!=0 ||liste2!=0||liste3!=0||liste2!=0);
+	}while(liste1!=0 ||liste2!=0||liste3!=0||liste2!=0); */
 	//else if(liste1!=null || liste1!="undefined" && liste2!=null || liste2!="undefined"&& liste3!=null || liste3!="undefined")
 /* 	switch case (){
 		case
 		case 
 		case 
 	} */
-}

@@ -40,10 +40,9 @@ function recupVal(id){
 			console.log(valeursSaisies);
 		
 				tabValeursSaisies.push(valeursSaisies);
-				console.log(tabValeursSaisies);
-		
+				
 	}
-	
+	console.log(tabValeursSaisies);	
 }
 
 //2. stocker les valeurs dans un tableau ? 4 ?l?ments et r?cup?rer les 4 derniers ?l?ments pour faire le calcul

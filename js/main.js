@@ -43,9 +43,12 @@ function recupVal(id){
 				tabValeursSaisies.push(valeursSaisies);					
 	}
 	return tabValeursSaisies;
-	console.log(tabValeursSaisies);
 }
+console.log(tabValeursSaisies);
 
+document.getElementById("numKg").addEventListener("change", function(){
+ 
+});
 //2. stocker les valeurs dans un tableau ? 4 ?l?ments et r?cup?rer les 4 derniers ?l?ments pour faire le calcul
 
 
@@ -63,10 +66,9 @@ function CalculRepartAliments(id){
 	else{
 		
 	}
-	
 	// .value=nombre4-(nombre!=0);
 	// var compteur=0; qui quantifie les valeurs diff de 0
-		
+	// var compteur++;	
 	}
 /* 	var i=5;
 	do {
@@ -79,4 +81,18 @@ function CalculRepartAliments(id){
 		case 
 	} */
 //**************************************Programme************************************************************************************************
+//1) croisement tableau valSaisies et timeSport + time Walk
+function calculateProg(){
+	
+	if((document.getElementById("liste1").value)>40 && document.getElementById("timeSport").value + document.getElementById("timeWalk").value<60){
+		document.getElementById("result").innerHTML("vous consommez une quantit? de sucres que vous n'?liminez pas int?gralement par une activit? suffisante");
+	}
+}
 
+
+//2) croisement tabValeursSaisies et targets
+
+
+
+
+//3) croisement genre + poids + taille : genre+ meters + numKg 

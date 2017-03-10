@@ -120,7 +120,7 @@ if(isset($_POST['submit'])){
 					<select class="form-control" id="targets">
 						<option value="1">Mincir</option>
 						<option value="1">Grossir</option>
-						<option value="2">Muscler</option>
+						<option value="2">Muscler/Tonifier/Raffermir</option>
 						<option value="3">Etre en forme</option>
 						<option value="4">Ameliorer ma sante(digestion, douleurs musculaires, nevralgies...)</option>
 					</select>
@@ -130,13 +130,14 @@ if(isset($_POST['submit'])){
 					  <input type="checkbox">souscription newsletter
 					</label>
 				</div>
-			  <button type="submit" class="btn btn-success">Envoyer</button>
+			  <button type="submit" class="btn btn-success" onclick="calculateProg();">Envoyer</button>
 			</form>         
         </article>
         <aside>
             <h3>Le saviez-vous ?</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.</p>
         </aside>
+		<div id="result"></div>
     </div> <!-- #main -->
   </div> <!-- #main-container -->
   <script src="js/main.js"></script>

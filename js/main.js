@@ -35,6 +35,7 @@ function AfficheLaDate(){
 function recupVal(id){
 	
 	var tabValeursSaisies=[];
+	
 	if(document.getElementById(id).value){
 		
 			var valeursSaisies=document.getElementById(id).value;
@@ -43,12 +44,13 @@ function recupVal(id){
 				tabValeursSaisies.push(valeursSaisies);					
 	}
 	return tabValeursSaisies;
+	
 }
 console.log(tabValeursSaisies);
 
-document.getElementById("numKg").addEventListener("change", function(){
+/* document.getElementById("numKg").addEventListener("change", function(){
  
-});
+}); */
 //2. stocker les valeurs dans un tableau ? 4 ?l?ments et r?cup?rer les 4 derniers ?l?ments pour faire le calcul
 
 
@@ -84,7 +86,7 @@ function CalculRepartAliments(id){
 //1) croisement tableau valSaisies et timeSport + time Walk
 
 function value(id){
-	document.getElementById(+'"'+id+'"'+).value;
+	//document.getElementById(+'"'+id+'"'+).value;
 }
 var genre=value()
 function calculateProg(){

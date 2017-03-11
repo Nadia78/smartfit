@@ -82,6 +82,11 @@ function CalculRepartAliments(id){
 	} */
 //**************************************Programme************************************************************************************************
 //1) croisement tableau valSaisies et timeSport + time Walk
+
+function value(id){
+	document.getElementById(+'"'+id+'"'+).value;
+}
+var genre=value()
 function calculateProg(){
 	
 	if((document.getElementById("liste1").value)>40 && document.getElementById("timeSport").value + document.getElementById("timeWalk").value<60){

@@ -21,6 +21,13 @@ if(isset($_POST['submit'])){
 	$timeWalk=trim(htmlentities(isset($_POST['timeWalk'])));
 	$targets=trim(htmlentities(isset($_POST['targets'])));
 	
+	//Contrôle des données:initialisation d'un tableau d'erreurs
+	
+	$errors=[];
+	
+	
+	// 
+	
 }
 
 

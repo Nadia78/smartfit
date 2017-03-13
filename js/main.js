@@ -53,35 +53,34 @@ console.log(tabValeursSaisies);
 }); */
 //2. stocker les valeurs dans un tableau ? 4 ?l?ments et r?cup?rer les 4 derniers ?l?ments pour faire le calcul
 
+function addnum (id)
+{
+// si la value est un chiffre, parser et faire l'op?ration, trim aussi,if(codeCar=/d) {,
+	
+var NumProjet1= document.getElementById('liste1').value;
+var NumProjet2= document.getElementById('liste2').value;
+var NumProjet3= document.getElementById('liste3').value;
+var NumProjet4= document.getElementById('liste4').value;
 
+if (NumProjet1 >0 ||NumProjet2 >0 || NumProjet3 > 0 || NumProjet4 > 0)
+ {
+
+var A = parseInt(NumProjet1,10);
+var B = parseInt(NumProjet2,10);
+var C = parseInt(NumProjet3,10);
+var D = parseInt(NumProjet4,10);
+
+
+var Total= A + B + C + D;
+document.getElementById('total').value = Total;
+}
+else{
+document.getElementById('total').value == 0;
+}
+
+};
 //3. Effectuer le calcul de la r?partiion en fonction des valeurs saisies allant jusqu'? 4 et conserver les derni?res valeurs
-function CalculRepartAliments(id){
 
-	if(document.getElementById(id).value){
-		//document.getElementById(id).value=(100-(tabValeursSaisies.length)/(tabValeursSaisies.length);
-		//document.getElementById('liste3').value=(100-document.getElementById('liste1').value)/3;
-		//document.getElementById('liste4').value=(100-document.getElementById('liste1').value)/3;
-	}
-	//else if(liste1!=null || liste1!="undefined" && liste2!=null || liste2!="undefined"){
-		//document.getElementById('liste3').value=100-(document.getElementById('liste1').value)+(document.getElementById('liste3').value);
-	//}
-	else{
-		
-	}
-	// .value=nombre4-(nombre!=0);
-	// var compteur=0; qui quantifie les valeurs diff de 0
-	// var compteur++;	
-	}
-/* 	var i=5;
-	do {
-		
-	}while(liste1!=0 ||liste2!=0||liste3!=0||liste2!=0); */
-	//else if(liste1!=null || liste1!="undefined" && liste2!=null || liste2!="undefined"&& liste3!=null || liste3!="undefined")
-/* 	switch case (){
-		case
-		case 
-		case 
-	} */
 //**************************************Programme************************************************************************************************
 //1) croisement tableau valSaisies et timeSport + time Walk
 
@@ -96,9 +95,7 @@ function calculateProg(){
 	}
 }
 
-
 //2) croisement tabValeursSaisies et targets
-
 
 
 

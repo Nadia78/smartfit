@@ -46,13 +46,13 @@ if(isset($_POST['submit'])){
 					<label for="">Repartition alimentation en %</label>
 					<div class="row">
 						<div class="col-xs-2">
-							<input id="liste1" type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="recupVal(this.id);" ng-model="nb1">
+							<input id="liste1" type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="recupVal(this.id);addnum();" ng-model="nb1">
 							<br>
-							<input id="liste2" type="text" class="form-control" placeholder="" value="0" onchange="recupVal(this.id);" ng-model="nb2">
+							<input id="liste2" type="text" class="form-control" placeholder="" value="0" onchange="recupVal(this.id);addnum();" ng-model="nb2">
 							<br>
-							<input id="liste3" type="text" class="form-control" placeholder=""  value="0"onchange="recupVal(this.id);" ng-model="nb3">
+							<input id="liste3" type="text" class="form-control" placeholder=""  value="0"onchange="recupVal(this.id);addnum();" ng-model="nb3">
 							<br>
-							<input id="liste4" type="text" class="form-control" placeholder=""  value="0"onchange="recupVal(this.id);" ng-model="nb4">
+							<input id="liste4" type="text" class="form-control" placeholder=""  value="0"onchange="recupVal(this.id);addnum();" ng-model="nb4">
 							<input id="total" type="text" class="form-control" placeholder=""  value="0"onchange="">
 							<div class="">
 							{{+(nb1-0)+(nb2-0)+(nb3-0)+(nb4-0)}}

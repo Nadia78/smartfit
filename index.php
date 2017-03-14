@@ -22,8 +22,15 @@ if(isset($_POST['submit'])){
 	$targets=trim(htmlentities(isset($_POST['targets'])));
 	
 	//Contrôle des données:initialisation d'un tableau d'erreurs
-	
+if(isset($_POST['send'])){
+
 	$errors=[];
+	
+	if(!$gender){
+		$errors["gender"]="Merci de renseigner votre civilité";
+		echo $errors["gender"];
+	}
+}
 	
 	// 
 	
@@ -55,7 +62,7 @@ if(isset($_POST['submit'])){
 							<input id="liste4" type="text" class="form-control" placeholder=""  value="0"onchange="recupVal(this.id);addnum();" ng-model="nb4">
 							<input id="total" type="text" class="form-control" placeholder=""  value="0"onchange="">
 							<div class="">
-							{{+(nb1-0)+(nb2-0)+(nb3-0)+(nb4-0)}}
+							<!--{{+(nb1-0)+(nb2-0)+(nb3-0)+(nb4-0)}}-->
 							<p>Le Total doit faire 100%</p>
 							</div>
 						</div>
@@ -138,7 +145,7 @@ if(isset($_POST['submit'])){
 					  <input type="checkbox">souscription newsletter
 					</label>
 				</div>
-			  <button type="submit" class="btn btn-success" onclick="calculateProg();">Envoyer</button>
+			  <button type="submit" class="btn btn-success" name="send" onclick="calculateProg();">Envoyer</button>
 			</form>         
         </article>
         <aside>

@@ -26,7 +26,7 @@ if(isset($_POST['send'])){
 
 	$errors=[];
 	
-	if(!$gender){
+	if(isset($gender)==false){
 		$errors["gender"]="Merci de renseigner votre civilité";
 		echo $errors["gender"];
 	}
@@ -60,6 +60,7 @@ if(isset($_POST['send'])){
 							<input id="liste3" type="text" class="form-control" placeholder=""  value="0"onchange="recupVal(this.id);addnum();" ng-model="nb3">
 							<br>
 							<input id="liste4" type="text" class="form-control" placeholder=""  value="0"onchange="recupVal(this.id);addnum();" ng-model="nb4">
+							<br>
 							<input id="total" type="text" class="form-control" placeholder=""  value="0"onchange="">
 							<div class="">
 							<!--{{+(nb1-0)+(nb2-0)+(nb3-0)+(nb4-0)}}-->

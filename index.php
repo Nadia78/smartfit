@@ -26,9 +26,15 @@ if(isset($_POST['send'])){
 
 	$errors=[];
 	
-	if(isset($gender)==false){
+	if(empty($gender)){
 		$errors["gender"]="Merci de renseigner votre civilité";
 		echo $errors["gender"];
+	}
+	
+	if(empty($ageRange)){
+		$errors['ageRange']="Merci de renseigner votre transche d'âge";
+		echo $errors['ageRange'];
+		
 	}
 }
 	

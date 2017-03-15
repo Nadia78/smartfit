@@ -36,6 +36,12 @@ if(isset($_POST['send'])){
 		echo $errors['ageRange'];
 		
 	}
+	function controlErrors($variable){
+		if(empty($variable)){
+			$errors['.$variable.']="Merci de renseigner le/es/a".$variable;
+			echo $errors['.$variable.'];
+		}
+	}
 }
 	
 	// 

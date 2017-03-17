@@ -97,10 +97,14 @@ function calculateProg(){
 var x = document.getElementById("myForm");
 var txt = "";
 var i;
+var tab=[];
 for (i = 0; i < x.length; i++) {
     txt = txt + x.elements[i].value + "<br>";
+	tab.push(x.elements[i].value);
+	
 }
 document.getElementById("result").innerHTML = txt;
+console.log(tab);
 
 //2) croisement tabValeursSaisies et targets
 

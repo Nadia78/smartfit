@@ -31,21 +31,18 @@ function AfficheLaDate(){
 
 //1. R?cup?rer les derni?res valeurs saisies
 
-function recupVal(id){
-	
+ function recupVal(id){
 	var tabValeursSaisies=[];
+	var valeursSaisies=document.getElementById(id).value;
 	
-	if(document.getElementById(id).value){
+		while(valeursSaisies){
 		
-			var valeursSaisies=document.getElementById(id).value;
-			
 			console.log(valeursSaisies);
-				tabValeursSaisies.push(valeursSaisies);					
-	}
-	return tabValeursSaisies;
-	
-}
-//console.log(tabValeursSaisies);
+			break;
+		}	
+		tab.push("+valeursSaisies+");
+		console.log(tabValeursSaisies);
+	} 
 
 /* document.getElementById("numKg").addEventListener("change", function(){
  
@@ -103,8 +100,8 @@ for (i = 0; i < x.length; i++) {
 	tab.push(x.elements[i].value);
 	
 }
-document.getElementById("result").innerHTML = txt;
-console.log(tab);
+//document.getElementById("result").innerHTML = txt;
+//console.log(tab);
 
 //2) croisement tabValeursSaisies et targets
 

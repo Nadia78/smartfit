@@ -5,7 +5,6 @@
 
 function AfficheLaDate(){
 	
-	
 	var date = new Date();
 	
 	var jour=date.getDate();
@@ -46,7 +45,7 @@ function recupVal(id){
 	return tabValeursSaisies;
 	
 }
-console.log(tabValeursSaisies);
+//console.log(tabValeursSaisies);
 
 /* document.getElementById("numKg").addEventListener("change", function(){
  
@@ -86,14 +85,22 @@ document.getElementById('total').value == 0;
 
 function value(id){
 	//document.getElementById(+'"'+id+'"'+).value;
+
 }
-var genre=value()
+var genre=value();
 function calculateProg(){
 	
 	if((document.getElementById("liste1").value)>40 && document.getElementById("timeSport").value + document.getElementById("timeWalk").value<60){
 		document.getElementById("result").innerHTML("vous consommez une quantit? de sucres que vous n'?liminez pas int?gralement par une activit? suffisante");
 	}
 }
+var x = document.getElementById("myForm");
+var txt = "";
+var i;
+for (i = 0; i < x.length; i++) {
+    txt = txt + x.elements[i].value + "<br>";
+}
+document.getElementById("result").innerHTML = txt;
 
 //2) croisement tabValeursSaisies et targets
 

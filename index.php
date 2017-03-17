@@ -49,7 +49,7 @@ if(isset($_POST['send'])){
  <div class="main-container">
     <div class="main wrapper clearfix">
 		<article>
-			<form>
+			<form id="myForm">
 				<div class="radio">
 					<label class="radio-inline" >
 						<input type="radio" name="genre"  id="radWomen" value="Madame" placeholder=""> Femme

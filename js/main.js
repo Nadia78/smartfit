@@ -84,13 +84,13 @@ function value(id){
 	//document.getElementById(+'"'+id+'"'+).value;
 
 }
-var genre=value();
+/* var genre=value();
 function calculateProg(){
 	
 	if((document.getElementById("liste1").value)>40 && document.getElementById("timeSport").value + document.getElementById("timeWalk").value<60){
 		document.getElementById("result").innerHTML("vous consommez une quantit? de sucres que vous n'?liminez pas int?gralement par une activit? suffisante");
 	}
-}
+} */
 var x = document.getElementById("myForm");
 var txt = "";
 var i;
@@ -99,6 +99,9 @@ for (i = 0; i < x.length; i++) {
     txt = txt + x.elements[i].value + "<br>";
 	tab.push(x.elements[i].value);
 	
+}
+if(tab[1]<tab[2]){
+	console.log("Mangez plus de viande");
 }
 //document.getElementById("result").innerHTML = txt;
 //console.log(tab);

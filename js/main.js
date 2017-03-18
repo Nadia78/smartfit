@@ -37,11 +37,11 @@ function AfficheLaDate(){
 	
 		while(valeursSaisies){
 		
-			console.log(valeursSaisies);
+			//console.log(valeursSaisies);
 			break;
 		}	
 		tab.push("+valeursSaisies+");
-		console.log(tabValeursSaisies);
+		//console.log(tabValeursSaisies);
 	} 
 
 /* document.getElementById("numKg").addEventListener("change", function(){
@@ -100,9 +100,16 @@ for (i = 0; i < x.length; i++) {
 	tab.push(x.elements[i].value);
 	
 }
-if(tab[1]<tab[2]){
-	console.log("Mangez plus de viande");
+function calculateProg(){
+var mess="";
+	if(tab[2]<tab[3]){
+	mess= mess+ "Mangez plus de viande"+"<br>";
+	}
+	document.getElementById("result").innerHTML = mess;
 }
+calculateProg();
+
+
 //document.getElementById("result").innerHTML = txt;
 //console.log(tab);
 

@@ -91,16 +91,16 @@ function calculateProg(){
 		document.getElementById("result").innerHTML("vous consommez une quantit? de sucres que vous n'?liminez pas int?gralement par une activit? suffisante");
 	}
 } */
-var x = document.getElementById("myForm");
-var txt = "";
-var i;
-var tab=[];
-for (i = 0; i < x.length; i++) {
-    txt = txt + x.elements[i].value + "<br>";
-	tab.push(x.elements[i].value);
-	
-}
+
 function calculateProg(){
+	var x = document.getElementById("myForm");
+	var txt = "";
+	var i;
+	var tab=[];
+	for (i = 0; i < x.length; i++) {
+		txt = txt + x.elements[i].value + "<br>";
+		tab.push(x.elements[i].value);
+	}
 var mess="";
 	if((tab[2]<tab[3])==true && tab[2]!=null){
 	mess= mess +"Mangez plus de viande"+"<br>";

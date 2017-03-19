@@ -63,7 +63,7 @@ if(isset($_POST['send'])){
 					<label for="">Repartition alimentation en %</label>
 					<div class="row">
 						<div class="col-xs-2">
-							<input id="liste1" type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="recupVal(this.id);addnum();" ng-model="nb1">
+							<input id="liste1" type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="recupVal(this.id);addnum();" ng-model="nb1" value="0">
 							<br>
 							<input id="liste2" type="text" class="form-control" placeholder="" value="0" onchange="recupVal(this.id);addnum();" ng-model="nb2">
 							<br>

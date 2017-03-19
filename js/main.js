@@ -102,10 +102,11 @@ for (i = 0; i < x.length; i++) {
 }
 function calculateProg(){
 var mess="";
-	if(tab[2]<tab[3]){
-	mess= mess+ "Mangez plus de viande"+"<br>";
-	}
+	if((tab[2]<tab[3])==true && tab[2]!=null){
+	mess= mess +"Mangez plus de viande"+"<br>";
 	document.getElementById("result").innerHTML = mess;
+	}
+	
 }
 calculateProg();
 

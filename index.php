@@ -156,7 +156,7 @@ if(isset($_POST['send'])){
 					  <input type="checkbox">souscription newsletter
 					</label>
 				</div>
-			  <button type="submit" class="btn btn-success" name="send" onclick="calculateProg();">Envoyer</button>
+			  <button type="submit" class="btn btn-success" name="send" onclick="recupAllValues();calculateProg();">Envoyer</button>
 			  <input type="reset" class="" value="Reset">
 			</form>         
         </article>

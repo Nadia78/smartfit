@@ -1,5 +1,6 @@
 <?php
 include 'header.php';
+require_once(_DIR_'functions.php');
 require(_DIR_'fpdf.php');
 
 class AlphaPDF extends FDF{

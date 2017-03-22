@@ -26,6 +26,8 @@ if(isset($_POST['submit'])){
 	$timeWalk=trim(htmlentities(isset($_POST['timeWalk'])));
 	$targets=trim(htmlentities(isset($_POST['targets'])));
 	
+	$tab=array($gender,$ageRange,$meters);
+	
 	//Contrôle des données:initialisation d'un tableau d'erreurs
 if(isset($_POST['send'])){
 
@@ -48,8 +50,11 @@ if(isset($_POST['send'])){
 			echo $errors['.$variable.'];
 		}
 	}
-}	
+ }	
 }
+echo <pre>;
+print_r($tab);
+echo <pre>;
 ?>
  <div class="main-container">
     <div class="main wrapper clearfix">

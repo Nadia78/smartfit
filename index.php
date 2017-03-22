@@ -1,5 +1,10 @@
 <?php
 include 'header.php';
+require(_DIR_'fpdf.php');
+
+class AlphaPDF extends FDF{
+	
+}
 
 if(isset($_POST['submit'])){
 

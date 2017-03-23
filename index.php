@@ -50,9 +50,7 @@ if(isset($_POST['send'])){
 			echo $errors['.$variable.'];
 		}
 	}
-	echo $meters;
-	print_r($tab);
-	echo "n";
+	pre($tab);
 }
 /* echo <pre>;
 print_r($tab);

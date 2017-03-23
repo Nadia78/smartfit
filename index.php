@@ -1,13 +1,13 @@
 <?php
 include 'header.php';
-require_once(_DIR_'functions.php');
-require(_DIR_'fpdf.php');
+require_once(__DIR__.'/functions/functions.php');
+require(__DIR__.'/fpdf/fpdf.php');
 
-class AlphaPDF extends FDF{
+class AlphaPDF extends FPDF{
 	
 }
 
-if(isset($_POST['submit'])){
+if(isset($_POST['send'])){
 
 	// Déclaration des variables 
 
@@ -30,8 +30,7 @@ if(isset($_POST['submit'])){
 	$tab=array($gender,$ageRange,$meters);
 	
 	//Contrôle des données:initialisation d'un tableau d'erreurs
-if(isset($_POST['send'])){
-
+	
 	$errors=[];
 	
 	if(empty($gender)){
@@ -51,16 +50,18 @@ if(isset($_POST['send'])){
 			echo $errors['.$variable.'];
 		}
 	}
- }	
+	echo $meters;
+	print_r($tab);
+	echo "n";
 }
-echo <pre>;
+/* echo <pre>;
 print_r($tab);
-echo <pre>;
+echo <pre>; */
 ?>
  <div class="main-container">
     <div class="main wrapper clearfix">
 		<article>
-			<form id="myForm">
+			<form id="myForm" method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>">
 				<div class="radio">
 					<label class="radio-inline" >
 						<input type="radio" name="genre"  id="radWomen" value="Madame" placeholder=""> Femme

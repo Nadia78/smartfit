@@ -75,13 +75,13 @@ echo <pre>; */
 						<div class="col-xs-2">
 							<input id="liste1" type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb1" value="0">
 							<br>
-							<input id="liste2" type="text" class="form-control" placeholder="" value="0" onchange="" ng-model="nb2">
+							<input id="liste2" type="text" class="form-control" placeholder="proteines (viande, oeufs, poissons...)" value="" onchange="" ng-model="nb2">
 							<br>
-							<input id="liste3" type="text" class="form-control" placeholder=""  value="0"onchange="" ng-model="nb3">
+							<input id="liste3" type="text" class="form-control" placeholder="legumes et fruits"  value="0"onchange="" ng-model="nb3">
 							<br>
-							<input id="liste4" type="text" class="form-control" placeholder=""  value="0"onchange="" ng-model="nb4">
+							<input id="liste4" type="text" class="form-control" placeholder="feculents"  value="0"onchange="" ng-model="nb4">
 							<br>
-							<input id="total" type="text" class="form-control" placeholder=""  value="0"onchange="">
+							<input id="total" type="text" class="form-control" placeholder="sucre"  value="0"onchange="">
 							<div class="">
 							<!--{{+(nb1-0)+(nb2-0)+(nb3-0)+(nb4-0)}}-->
 							<p>Le Total doit faire 100%</p>

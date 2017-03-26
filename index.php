@@ -50,6 +50,10 @@ if(isset($_POST['send'])){
 			echo $errors['.$variable.'];
 		}
 	}
+	for($i=0;$i<count($tab);$i++){
+		//controlErrors(tab[$i]);
+	}
+	
 	pre($tab);
 }
 /* echo <pre>;

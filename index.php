@@ -35,12 +35,12 @@ if(isset($_POST['send'])){
 	
 	if(empty($gender)){
 		$errors["gender"]="Merci de renseigner votre civilité";
-		echo $errors["gender"];
+		echo $errors["gender"]."<br>";
 	}
 	
 	if(empty($ageRange)){
 		$errors['ageRange']="Merci de renseigner votre transche d'âge";
-		echo $errors['ageRange'];
+		echo $errors['ageRange']."<br>";
 		
 	}
 	
@@ -54,7 +54,7 @@ if(isset($_POST['send'])){
 		//controlErrors(tab[$i]);
 	}
 	
-	pre($tab);
+	//pre($tab);
 }
 /* echo <pre>;
 print_r($tab);

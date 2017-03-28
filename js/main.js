@@ -91,11 +91,12 @@ function calculateProg(){
 		document.getElementById("result").innerHTML("vous consommez une quantit? de sucres que vous n'?liminez pas int?gralement par une activit? suffisante");
 	}
 } */
+var tab=[];
 function recupAllValues(){
 	var x = document.getElementById("myForm");
 	var txt = "";
 	var i;
-	var tab=[];
+	
 	for (i = 0; i < x.length; i++) {
 		txt = txt + x.elements[i].value + "<br>";
 		tab.push(x.elements[i].value);
@@ -105,20 +106,22 @@ function recupAllValues(){
 }
 function calculateProg(){
 	
-	function recupAllValues();
+	recupAllValues();
 	var mess="";
 
 	// calcul rapport entre la consommation de viande et de legumes
 	if((tab[2]<tab[3])==true && tab[2]!=null){
 		mess= mess +"Mangez plus de viande"+"<br>";
-		document.getElementById("result").innerHTML = mess;
+		document.getElementById("result").innerText = mess;
 	}
 	// calcul de l'imc via le tableau tab recuperant les valeurs saisies 
-	function imc(tab[8],tab[9]){
-		var imc=tab[8]/tab[9]^2;
+	var poids=tab[8];
+	var taille=tab[9];
+	function imc(poids,taille){
+		var imc=poids/(taille)^2;
 		return imc;
 	}
-	function imc();
+	imc(poids,taille);
 	console.log(imc);
 	
 	if(imc<18.5){
@@ -136,7 +139,7 @@ function calculateProg(){
 	}
 	else if(imc>35){
 		mess="Votre imc indique un surpoids important";	
-		document.getElementById("result").innerHTML = mess;
+		document.getElementById("result").innerText = mess;
 	}
 	
 }

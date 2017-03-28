@@ -59,6 +59,13 @@ if(isset($_POST['send'])){
 /* echo <pre>;
 print_r($tab);
 echo <pre>; */
+/* TODO List : 
+- utf 8
+- display result 
+- display errors message on the right area
+- start to create dynamic variables for pdf  generator
+
+ */
 ?>
  <div class="main-container">
     <div class="main wrapper clearfix">

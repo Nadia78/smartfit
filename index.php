@@ -53,7 +53,7 @@ if(isset($_POST['send'])){
 	for($i=0;$i<count($tab);$i++){
 		//controlErrors(tab[$i]);
 	}
-	
+
 	//pre($tab);
 }
 /* echo <pre>;
@@ -178,6 +178,7 @@ echo <pre>; */
 					</label>
 				</div>
 			  <button type="submit" class="btn btn-success" name="send" onclick="recupAllValues();calculateProg();">Envoyer</button>
+			  <button type="submit" class="btn btn-success" name="generate" >Generer Pdf</button>
 			  <input type="reset" class="" value="Reset">
 			</form>         
         </article>

@@ -116,7 +116,7 @@ echo <pre>; */
 				</div>
 				<div class="form-group">
 					<label for="meters">Taille</label>
-					<input type="text" class="form-control" id="meters" placeholder="1.68 m">
+					<input type="text" class="form-control" id="meters" placeholder="168 si 1.68 m">
 				</div>
 				<div class="form-group">
 					<label for="exampleInputPassword1">Pratiquez-vous une activite sportive ?</label>

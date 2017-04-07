@@ -116,9 +116,9 @@ function calculateProg(){
 	}
 	// calcul de l'imc via le tableau tab recuperant les valeurs saisies 
 	var poids=tab[8];
-	var taille=tab[9];
+	var taille=tab[9]*2;
 	function imc(poids,taille){
-		var imc=poids/(taille)^2;
+		var imc=poids/taille;
 		return imc;
 	}
 	imc(poids,taille);

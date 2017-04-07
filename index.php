@@ -20,6 +20,7 @@ if(isset($_POST['send'])){
 	$ageRange=trim(htmlentities(isset($_POST['ageRange'])));
 	$kg=trim(htmlentities(isset($_POST['numKg'])));
 	$meters=trim(htmlentities(isset($_POST['meters'])));
+	$taille=$meters*2;
 
 	$sport=trim(htmlentities(isset($_POST['sport'])));
 	$nameSport=trim(htmlentities(isset($_POST['nameSport'])));
@@ -39,7 +40,7 @@ if(isset($_POST['send'])){
 	}
 	
 	if(empty($ageRange)){
-		$errors['ageRange']="Merci de renseigner votre transche d'âge";
+		$errors['ageRange']="Merci de renseigner votre tranche d'âge";
 		echo $errors['ageRange']."<br>";
 		
 	}
@@ -53,7 +54,18 @@ if(isset($_POST['send'])){
 	for($i=0;$i<count($tab);$i++){
 		//controlErrors(tab[$i]);
 	}
+// Programme du diagnostic fitness
+	
+	function imc($kg,$taille){
+		$imc=$kg/$taille;
+		return $imc;
+	}
+	echo imc($kg,$taille);
+// Si le tableau d'erreurs est vide 
 
+	if(empty($errors)){
+		
+	}
 	//pre($tab);
 }
 /* echo <pre>;

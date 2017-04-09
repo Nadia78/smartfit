@@ -206,10 +206,17 @@ echo <pre>; */
 			  <input type="reset" class="" value="Reset">
 			</form>         
         </article>
+		<aside>
+		<div row="col-md-5">
+		<img id="aside" src="img/legumes.jpg">
+		</div>
+		</aside>
         <aside>
             <h3>Le saviez-vous ?</h3>
             <p>Les graisses stimulent la muqueuse gastrique qui sécrète une hormone qui stimule la production et la sécrétion d'enzymes digestives et, signale au cerveau que nous avons mangé suffisamment. Les produits laitiers à 0% de matières grasses et autres produits à 0% inhibent ce signal et peuvent vous inciter à trop manger.</p>
+			
         </aside>
+		
 		<div id="result"></div>
     </div> <!-- #main -->
   </div> <!-- #main-container -->

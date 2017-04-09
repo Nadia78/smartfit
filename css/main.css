@@ -169,7 +169,10 @@ h{
 	color:green;
 	font-style:normal;
 }
-
+#aside{
+   display: inline-block;
+   vertical-align: middle;
+}
 
 
 

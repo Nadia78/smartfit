@@ -104,9 +104,9 @@ function recupAllValues(){
 	return tab;
 	console.log(tab);
 }
-function calculateProg(){
+function calculateProg(tableau){
 	
-	recupAllValues();
+	recupAllValues(tableau);
 	var mess="";
 
 	// calcul rapport entre la consommation de viande et de legumes
@@ -143,7 +143,7 @@ function calculateProg(){
 	}
 	
 }
-calculateProg();
+calculateProg(tab);
 
 
 

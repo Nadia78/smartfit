@@ -51,8 +51,8 @@ if(isset($_POST['action'])){
 			echo $errors['.$variable.'];
 		}
 	}
-	for($i=0;$i<count($tab);$i++){
-		//controlErrors(tab[$i]);
+	foreach($tab as $value){
+		echo $value;
 	}
 // Programme du diagnostic fitness
 	echo "*".$meters."<br>";
@@ -69,6 +69,10 @@ if(isset($_POST['action'])){
 	}
 	
 	echo "********************************".imc($kg,$taille);
+	if(isset($imc)){
+		echo "votre imc est de".$imc;
+	}
+	
 // Si le tableau d'erreurs est vide 
 
 	if(empty($errors)){

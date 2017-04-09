@@ -55,12 +55,19 @@ if(isset($_POST['send'])){
 		//controlErrors(tab[$i]);
 	}
 // Programme du diagnostic fitness
-	
+	echo $taille;
 	function imc($kg,$taille){
-		$imc=$kg/$taille;
-		return $imc;
+
+		try{
+			$imc=$kg/$taille;
+			return $imc;
+		}catch(Exception $exception){
+			echo exception->getMessage();
+		}
+		
 	}
-	echo imc($kg,$taille);
+	
+	echo "********************************".imc($kg,$taille);
 // Si le tableau d'erreurs est vide 
 
 	if(empty($errors)){
@@ -124,11 +131,11 @@ echo <pre>; */
 				</div>
 				<div class="form-group">
 					<label for="numKg">Poids en kg</label>
-					<input type="number" class="form-control" id="numKg" placeholder="65">
+					<input type="number" class="form-control" id="numKg" name="numkg" placeholder="65">
 				</div>
 				<div class="form-group">
 					<label for="meters">Taille</label>
-					<input type="text" class="form-control" id="meters" placeholder="168 si 1.68 m">
+					<input type="text" class="form-control" id="meters" name="meters" placeholder="168 si 1.68 m">
 				</div>
 				<div class="form-group">
 					<label for="exampleInputPassword1">Pratiquez-vous une activite sportive ?</label>

@@ -7,7 +7,7 @@ class AlphaPDF extends FPDF{
 	
 }
 
-if(isset($_POST['send'])){
+if(isset($_POST['action'])){
 
 	// Déclaration des variables 
 
@@ -55,14 +55,15 @@ if(isset($_POST['send'])){
 		//controlErrors(tab[$i]);
 	}
 // Programme du diagnostic fitness
-	echo $taille;
+	echo "*".$meters."<br>";
+	echo "..".$timeWalk."<br>";
+	echo "...".$kg."<br>";
 	function imc($kg,$taille){
-
 		try{
 			$imc=$kg/$taille;
 			return $imc;
 		}catch(Exception $exception){
-			echo exception->getMessage();
+			echo $exception->getMessage();
 		}
 		
 	}
@@ -179,7 +180,7 @@ echo <pre>; */
 				</div>
 				<div class="form-group">
 					<label for="timeWalk">Si oui combien de temps en minutes ?</label>
-					<input type="text" class="form-control" id="timeWalk" placeholder="20">
+					<input type="text" class="form-control" id="timeWalk" name="timeWalk"placeholder="20">
 				</div>
 				<div class="form-group">
 					<label for="targets">Votre objectif prioritaire</label>
@@ -196,7 +197,7 @@ echo <pre>; */
 					  <input type="checkbox">souscription newsletter
 					</label>
 				</div>
-			  <button type="submit" class="btn btn-success" name="send" onclick="recupAllValues();calculateProg();">Envoyer</button>
+			  <button type="submit" class="btn btn-success" name="action" onclick="recupAllValues();calculateProg();">Envoyer</button>
 			  <button type="submit" class="btn btn-success" name="generate" >Generer Pdf</button>
 			  <input type="reset" class="" value="Reset">
 			</form>         

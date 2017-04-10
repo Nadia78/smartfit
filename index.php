@@ -58,6 +58,7 @@ if(isset($_POST['action'])){
 	echo "*".$meters."<br>";
 	echo "..".$timeWalk."<br>";
 	echo "...".$kg."<br>";
+	echo "...".$gender."<br>";
 	function imc($kg,$taille){
 		try{
 			$imc=$kg/$taille;

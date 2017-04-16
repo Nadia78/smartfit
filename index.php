@@ -100,6 +100,7 @@ echo <pre>; */
     <div class="main wrapper clearfix">
 		<article>
 			<form id="myForm" method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>">
+			<div class="row">
 				<div class="radio">
 					<label class="radio-inline" >
 						<input type="radio" name="genre"  id="radWomen" value="Madame" placeholder=""> Femme
@@ -113,27 +114,53 @@ echo <pre>; */
 					<label for="">Repartition alimentation en %</label>
 					<div class="row">
 						<div class="col-xs-2">
-							<input id="liste1" type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb1" value="0">
+							<input id="liste1" type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb1" value="0" focus>
 						</div>
 						<div class="col-xs-10">
-						LABEL
+						<b>% de legumes </b>
 						</div>
 					</div>
-							
-							<input id="liste2" type="text" class="form-control" placeholder="proteines (viande, oeufs, poissons...)" value="" onchange="" ng-model="nb2">
-							<br>
-							<input id="liste3" type="text" class="form-control" placeholder="legumes et fruits"  value="0"onchange="" ng-model="nb3">
-							<br>
-							<input id="liste4" type="text" class="form-control" placeholder="feculents"  value="0"onchange="" ng-model="nb4">
-							<br>
-							<input id="total" type="text" class="form-control" placeholder="sucre"  value="0"onchange="">
+					<br>
+					<div class="row">
+						<div class="col-xs-2">
+							<input id="liste2" type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb1" value="0">
+						</div>
+						<div class="col-xs-10">
+						<b>% de proteines (viandes, poissons, oeufs...) </b>
+						</div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-xs-2">
+							<input id="liste3" type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb1" value="0">
+						</div>
+						<div class="col-xs-10">
+						<b>% de fruits </b>
+						</div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-xs-2">
+							<input id="liste4" type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb1" value="0">
+						</div>
+						<div class="col-xs-10">
+						<b>% de sucres, farine, féculents </b>
+						</div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-xs-2">
+							<input id="liste4" type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb1" value="0">
+						</div>
+						<div class="col-xs-10">
+						Le Total doit faire 100%
+						</div>
+					</div>
 							<div class="">
 							<!--{{+(nb1-0)+(nb2-0)+(nb3-0)+(nb4-0)}}-->
-							<p>Le Total doit faire 100%</p>
+							<p></p>
 							</div>
-						</div>
-					</div>
-				</div>
+						
 				 <div class="form-group">
 					<label for="ageRange">Tranche d'age</label>
 					<select class="form-control" id="ageRange">
@@ -214,12 +241,14 @@ echo <pre>; */
 			  <button type="submit" class="btn btn-success" name="action" onclick="recupAllValues();calculateProg();">Envoyer</button>
 			  <button type="submit" class="btn btn-success" name="generate" >Generer Pdf</button>
 			  <input type="reset" class="" value="Reset">
+			
 			</form>         
         </article>
 		<aside>
 		<div row="col-md-5">
 		<img id="aside" src="img/legumes.jpg" class="img-responsive">
 		</div>
+		
 		</aside>
         <aside>
             <h3>Le saviez-vous ?</h3>

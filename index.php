@@ -11,24 +11,28 @@ if(isset($_POST['action'])){
 
 	// Déclaration des variables 
 
-	$gender=trim(htmlentities(isset($_POST['genre'])));
-	$liste1=trim(htmlentities(isset($_POST['liste1'])));
-	$liste2=trim(htmlentities(isset($_POST['liste2'])));
-	$liste3=trim(htmlentities(isset($_POST['liste3'])));
-	$liste4=trim(htmlentities(isset($_POST['liste4'])));
+	var_dump($_POST);
+	echo "<br>";
+	$gender=trim(htmlentities($_POST['genre']));
+	$liste1=trim(htmlentities($_POST['liste1']));
+	$liste2=trim(htmlentities($_POST['liste2']));
+	$liste3=trim(htmlentities($_POST['liste3']));
+	$liste4=trim(htmlentities($_POST['liste4']));
 
-	$ageRange=trim(htmlentities(isset($_POST['ageRange'])));
-	$kg=trim(htmlentities(isset($_POST['numKg'])));
-	$meters=trim(htmlentities(isset($_POST['meters'])));
-	$taille=$meters*2;
+	$ageRange=trim(htmlentities($_POST['ageRange']));
+	$kg=trim(htmlentities($_POST['numKg']));
+	$meters=trim(htmlentities($_POST['meters']));
+	//$taille=$meters*2;
 
-	$sport=trim(htmlentities(isset($_POST['sport'])));
-	$nameSport=trim(htmlentities(isset($_POST['nameSport'])));
-	$answerWalk=trim(htmlentities(isset($_POST['answerWalk'])));
-	$timeWalk=trim(htmlentities(isset($_POST['timeWalk'])));
-	$targets=trim(htmlentities(isset($_POST['targets'])));
+	$sport=trim(htmlentities($_POST['sport']));
+	$nameSport=trim(htmlentities($_POST['nameSport']));
+	$answerWalk=trim(htmlentities($_POST['answerWalk']));
+	$timeWalk=trim(htmlentities($_POST['timeWalk']));
+	$targets=trim(htmlentities($_POST['targets']));
 	
-	$tab=array($gender,$ageRange,$meters);
+	echo "Meters =".$_POST['meters'];
+	
+	//$tab=array($gender,$ageRange,$meters);
 	
 	//Contrôle des données:initialisation d'un tableau d'erreurs
 	
@@ -110,7 +114,12 @@ echo <pre>; */
 					<div class="row">
 						<div class="col-xs-2">
 							<input id="liste1" type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb1" value="0">
-							<br>
+						</div>
+						<div class="col-xs-10">
+						LABEL
+						</div>
+					</div>
+							
 							<input id="liste2" type="text" class="form-control" placeholder="proteines (viande, oeufs, poissons...)" value="" onchange="" ng-model="nb2">
 							<br>
 							<input id="liste3" type="text" class="form-control" placeholder="legumes et fruits"  value="0"onchange="" ng-model="nb3">
@@ -209,7 +218,7 @@ echo <pre>; */
         </article>
 		<aside>
 		<div row="col-md-5">
-		<img id="aside" src="img/legumes.jpg">
+		<img id="aside" src="img/legumes.jpg" class="img-responsive">
 		</div>
 		</aside>
         <aside>

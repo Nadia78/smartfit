@@ -22,7 +22,7 @@ if(isset($_POST['action'])){
 	$ageRange=trim(htmlentities($_POST['ageRange']));
 	$kg=trim(htmlentities($_POST['numKg']));
 	$meters=trim(htmlentities($_POST['meters']));
-	//$taille=$meters*2;
+	$taille=$meters*2;
 
 	$sport=trim(htmlentities($_POST['sport']));
 	$nameSport=trim(htmlentities($_POST['nameSport']));
@@ -55,9 +55,10 @@ if(isset($_POST['action'])){
 			echo $errors['.$variable.'];
 		}
 	}
-	foreach($tab as $value){
+/* 	foreach($tab as $value){
 		echo $value;
-	}
+	} */
+	
 // Programme du diagnostic fitness
 	echo "*".$meters."<br>";
 	echo "..".$timeWalk."<br>";
@@ -114,7 +115,7 @@ echo <pre>; */
 					<label for="">Repartition alimentation en %</label>
 					<div class="row">
 						<div class="col-xs-2">
-							<input id="liste1" type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb1" value="0" focus>
+							<input id="liste1" type="text" class="form-control" name="liste1" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb1" value="0" focus>
 						</div>
 						<div class="col-xs-10">
 						<b>% de legumes </b>
@@ -123,7 +124,7 @@ echo <pre>; */
 					<br>
 					<div class="row">
 						<div class="col-xs-2">
-							<input id="liste2" type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb1" value="0">
+							<input id="liste2" name="liste2"  type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb1" value="0">
 						</div>
 						<div class="col-xs-10">
 						<b>% de proteines (viandes, poissons, oeufs...) </b>
@@ -132,7 +133,7 @@ echo <pre>; */
 					<br>
 					<div class="row">
 						<div class="col-xs-2">
-							<input id="liste3" type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb1" value="0">
+							<input id="liste3" name="liste3"  type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb1" value="0">
 						</div>
 						<div class="col-xs-10">
 						<b>% de fruits </b>
@@ -141,7 +142,7 @@ echo <pre>; */
 					<br>
 					<div class="row">
 						<div class="col-xs-2">
-							<input id="liste4" type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb1" value="0">
+							<input id="liste4" name="liste4"  type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb1" value="0">
 						</div>
 						<div class="col-xs-10">
 						<b>% de sucres, farine, féculents </b>
@@ -150,7 +151,7 @@ echo <pre>; */
 					<br>
 					<div class="row">
 						<div class="col-xs-2">
-							<input id="liste4" type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb1" value="0">
+							<input id="liste5" name="liste5" type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb1" value="0">
 						</div>
 						<div class="col-xs-10">
 						Le Total doit faire 100%
@@ -163,7 +164,7 @@ echo <pre>; */
 						
 				 <div class="form-group">
 					<label for="ageRange">Tranche d'age</label>
-					<select class="form-control" id="ageRange">
+					<select class="form-control" id="ageRange" name="ageRange">
 						<option value="1">Entre 18 et 24 ans</option>
 						<option value="2">Entre 25 et 39 ans</option>
 						<option value="3">Entre 40 et 55 ans</option>
@@ -173,7 +174,7 @@ echo <pre>; */
 				</div>
 				<div class="form-group">
 					<label for="numKg">Poids en kg</label>
-					<input type="number" class="form-control" id="numKg" name="numkg" placeholder="65">
+					<input type="number" class="form-control" id="numKg" name="numKg" placeholder="65">
 				</div>
 				<div class="form-group">
 					<label for="meters">Taille</label>
@@ -184,16 +185,16 @@ echo <pre>; */
 	
 				<div class="radio">
 					<label class="radio-inline" >
-						<input type="radio" name="genre"  id="sport" value="Madame" placeholder=""> oui
+						<input type="radio" name="sport"  id="sport" value="Madame" placeholder=""> oui
 					</label>
 					<label class="radio-inline">
-						<input type="radio" name="genre" id="sport" value="Monsieur" placeholder=""> non
+						<input type="radio" name="sport" id="sport" value="Monsieur" placeholder=""> non
 					</label>
 				</div>
 				</div>
 				<div class="form-group">
 					<label for="nameSport">Nature du sport pratique par semaine</label>
-					<select class="form-control" id="nameSport">
+					<select class="form-control" id="nameSport" name="nameSport">
 						<option value="viande">
 						<option>Cardio : course a pied, vélo,piscine</option>
 						<option>squash</option>
@@ -205,7 +206,7 @@ echo <pre>; */
 				</div>
 				<div class="form-group">
 					<label for="timeSport">Temps consacre au sport en minutes</label>
-					<input type="text" class="form-control" id="timeSport" placeholder="60">
+					<input type="text" class="form-control" id="timeSport"  name="timeSport"placeholder="60">
 				</div>
 
 				<div class="form-group">
@@ -225,7 +226,7 @@ echo <pre>; */
 				</div>
 				<div class="form-group">
 					<label for="targets">Votre objectif prioritaire</label>
-					<select class="form-control" id="targets">
+					<select class="form-control" id="targets" name="targets">
 						<option value="1">Mincir</option>
 						<option value="1">Grossir</option>
 						<option value="2">Muscler/Tonifier/Raffermir</option>

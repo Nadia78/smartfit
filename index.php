@@ -22,6 +22,10 @@ if(isset($_POST['action'])){
 	$ageRange=trim(htmlentities($_POST['ageRange']));
 	$kg=trim(htmlentities($_POST['numKg']));
 	$meters=trim(htmlentities($_POST['meters']));
+/* 	function Taille($meters){
+		$taille=$meters*2;
+		return $taille;
+	} */
 	$taille=$meters*2;
 
 	$sport=trim(htmlentities($_POST['sport']));
@@ -30,7 +34,8 @@ if(isset($_POST['action'])){
 	$timeWalk=trim(htmlentities($_POST['timeWalk']));
 	$targets=trim(htmlentities($_POST['targets']));
 	
-	echo "Meters =".$_POST['meters'];
+	echo "Meters =".$_POST['meters']."<br>";
+	echo "Taille =".$taille."<br>";
 	
 	//$tab=array($gender,$ageRange,$meters);
 	
@@ -60,7 +65,8 @@ if(isset($_POST['action'])){
 	} */
 	
 // Programme du diagnostic fitness
-	echo "*".$meters."<br>";
+
+	//echo "*".$meters."<br>";
 	echo "..".$timeWalk."<br>";
 	echo "...".$kg."<br>";
 	echo "...".$gender."<br>";
@@ -74,7 +80,7 @@ if(isset($_POST['action'])){
 		
 	}
 	
-	echo "********************************".imc($kg,$taille);
+	echo "Imc=".imc($kg,$taille);
 	if(isset($imc)){
 		echo "votre imc est de".$imc;
 	}

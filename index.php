@@ -247,7 +247,7 @@ echo <pre>; */
 				</div>
 			  <button type="submit" class="btn btn-success" name="action" onclick="recupAllValues();calculateProg();">Envoyer</button>
 			  <button type="submit" class="btn btn-success" name="generate" >Generer Pdf</button>
-			  <input type="reset" class="" value="Reset">
+			  <input id="reset" type="reset" class="" value="Reset">
 			
 			</form>         
         </article>

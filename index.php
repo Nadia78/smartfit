@@ -27,6 +27,8 @@ if(isset($_POST['action'])){
 		return $taille;
 	} */
 	$taille=$meters*2;
+	$taille2=$meters*$meters;
+	
 
 	$sport=trim(htmlentities($_POST['sport']));
 	$nameSport=trim(htmlentities($_POST['nameSport']));

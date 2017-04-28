@@ -11,8 +11,8 @@ if(isset($_POST['action'])){
 
 	// Déclaration des variables 
 
-	var_dump($_POST);
-	echo "<br>";
+	//var_dump($_POST);
+	//echo "<br>";
 	$gender=trim(htmlentities($_POST['genre']));
 	$liste1=trim(htmlentities($_POST['liste1']));
 	$liste2=trim(htmlentities($_POST['liste2']));
@@ -36,8 +36,8 @@ if(isset($_POST['action'])){
 	$timeWalk=trim(htmlentities($_POST['timeWalk']));
 	$targets=trim(htmlentities($_POST['targets']));
 	
-	echo "Meters =".$_POST['meters']."<br>";
-	echo "Taille =".$taille."<br>";
+	//echo "Meters =".$_POST['meters']."<br>";
+	//echo "Taille =".$taille."<br>";
 	
 	//$tab=array($gender,$ageRange,$meters);
 	
@@ -69,9 +69,9 @@ if(isset($_POST['action'])){
 // Programme du diagnostic fitness
 
 	//echo "*".$meters."<br>";
-	echo "..".$timeWalk."<br>";
-	echo "...".$kg."<br>";
-	echo "...".$gender."<br>";
+	//echo "..".$timeWalk."<br>";
+	//echo "...".$kg."<br>";
+	//echo "...".$gender."<br>";
 	function imc($kg,$taille){
 		try{
 			$imc=$kg/$taille;
@@ -81,8 +81,6 @@ if(isset($_POST['action'])){
 		}
 		
 	}
-	
-	echo "Imc=".imc($kg,$taille);
 	if(isset($imc)){
 		echo "votre imc est de".$imc;
 	}
@@ -110,6 +108,7 @@ echo <pre>; */
 		<article>
 			<form id="myForm" method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>">
 			<div class="row">
+				<div class="alert alert-info" role="alert"><?php if(isset($kg,$taille)){echo "Votre Imc est de ".imc($kg,$taille);} ?></div>
 				<div class="radio">
 					<label class="radio-inline" >
 						<input type="radio" name="genre"  id="radWomen" value="Madame" placeholder=""> Femme

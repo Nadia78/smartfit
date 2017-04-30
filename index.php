@@ -11,7 +11,7 @@ if(isset($_POST['action'])){
 
 	// Déclaration des variables 
 
-	//var_dump($_POST);
+	var_dump($_POST);
 	//echo "<br>";
 	$gender=trim(htmlentities($_POST['genre']));
 	$liste1=trim(htmlentities($_POST['liste1']));
@@ -46,12 +46,12 @@ if(isset($_POST['action'])){
 	$errors=[];
 	
 	if(empty($gender)){
-		$errors["gender"]="Merci de renseigner votre civilité";
+		$errors["gender"]="Merci de renseigner votre civilitÃ©";
 		echo $errors["gender"]."<br>";
 	}
 	
 	if(empty($ageRange)){
-		$errors['ageRange']="Merci de renseigner votre tranche d'âge";
+		$errors['ageRange']="Merci de renseigner votre tranche d'Ã¢ge";
 		echo $errors['ageRange']."<br>";
 		
 	}
@@ -77,7 +77,7 @@ if(isset($_POST['action'])){
 			$imc=$kg/$taille;
 			return $imc;
 		}catch(Exception $exception){
-			echo $exception->getMessage();
+			echo "".$exception->getMessage();
 		}
 		
 	}
@@ -111,10 +111,10 @@ echo <pre>; */
 				<div class="alert alert-info" role="alert"><?php if(isset($kg,$taille)){echo "Votre Imc est de ".imc($kg,$taille);} ?></div>
 				<div class="radio">
 					<label class="radio-inline" >
-						<input type="radio" name="genre"  id="radWomen" value="Madame" placeholder=""> Femme
+						<input type="radio" name="genre"  id="radWomen" value="Madame" checked> Femme
 					</label>
 					<label class="radio-inline">
-						<input type="radio" name="genre" id="radMen" value="Monsieur" placeholder=""> Homme
+						<input type="radio" name="genre" id="radMen" value="Monsieur"> Homme
 					</label>
 				</div>
 				
@@ -192,23 +192,23 @@ echo <pre>; */
 	
 				<div class="radio">
 					<label class="radio-inline" >
-						<input type="radio" name="sport"  id="sport" value="Madame" placeholder=""> oui
+						<input type="radio" name="sport"  id="sport" value="Madame"> oui
 					</label>
 					<label class="radio-inline">
-						<input type="radio" name="sport" id="sport" value="Monsieur" placeholder=""> non
+						<input type="radio" name="sport" id="sport" value="Monsieur" checked> non
 					</label>
 				</div>
 				</div>
 				<div class="form-group">
 					<label for="nameSport">Nature du sport pratique par semaine</label>
 					<select class="form-control" id="nameSport" name="nameSport">
-						<option value="viande">
-						<option>Cardio : course a pied, vélo,piscine</option>
-						<option>squash</option>
-						<option>tennis</option>
-						<option>sport de combat</option>
-						<option>gymnastique</option>
-						<option>musculation</option>
+					
+						<option value="viande" selected>Cardio : course a pied, vélo,piscine</option>
+						<option value="viande2">squash</option>
+						<option value="viande3">tennis</option>
+						<option value="viande4">sport de combat</option>
+						<option value="viande5">gymnastique</option>
+						<option value="viande6">musculation</option>
 					</select>
 				</div>
 				<div class="form-group">
@@ -220,10 +220,10 @@ echo <pre>; */
 					<label for="answerWalk">Est-ce que vous marchez ou courrez durant vos occupations quotidiennes ?</label>
 					<div class="radio">
 						<label class="radio-inline" >
-							<input type="radio" name="answerWalk"  id="sport" value="Madame" placeholder=""> oui
+							<input type="radio" name="answerWalk"  id="sport" value="Madame" checked> oui
 						</label>
 						<label class="radio-inline">
-							<input type="radio" name="answerWalk" id="sport" value="Monsieur" placeholder=""> non
+							<input type="radio" name="answerWalk" id="sport" value="Monsieur" > non
 						</label>
 					</div>
 				</div>
@@ -260,7 +260,7 @@ echo <pre>; */
 		</aside>
         <aside>
             <h3>Le saviez-vous ?</h3>
-            <p>Les graisses stimulent la muqueuse gastrique qui sécrète une hormone qui stimule la production et la sécrétion d'enzymes digestives et, signale au cerveau que nous avons mangé suffisamment. Les produits laitiers à 0% de matières grasses et autres produits à 0% inhibent ce signal et peuvent vous inciter à trop manger.</p>
+            <p>Les graisses stimulent la muqueuse gastrique qui sÃ©crÃ¨te une hormone qui stimule la production et la sécrétion d'enzymes digestives et, signale au cerveau que nous avons mangé suffisamment. Les produits laitiers à 0% de matières grasses et autres produits à 0% inhibent ce signal et peuvent vous inciter à trop manger.</p>
 			
         </aside>
 		

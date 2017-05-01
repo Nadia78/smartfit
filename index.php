@@ -11,7 +11,7 @@ if(isset($_POST['action'])){
 
 	// DÈclaration des variables 
 
-	var_dump($_POST);
+	//var_dump($_POST);
 	//echo "<br>";
 	$gender=trim(htmlentities($_POST['genre']));
 	$liste1=trim(htmlentities($_POST['liste1']));
@@ -73,13 +73,14 @@ if(isset($_POST['action'])){
 	//echo "...".$kg."<br>";
 	//echo "...".$gender."<br>";
 	function imc($kg,$taille){
-		try{
-			$imc=$kg/$taille;
-			return $imc;
-		}catch(Exception $exception){
-			echo "".$exception->getMessage();
-		}
-		
+		if($kg!=null AND $taille!=null AND isset($kg,$taille)){
+			try{
+				$imc=$kg/$taille;
+				return $imc;
+			}catch(Exception $exception){
+				echo "".$exception->getMessage();
+			}
+		}	
 	}
 	if(isset($imc)){
 		echo "votre imc est de".$imc;
@@ -108,7 +109,14 @@ echo <pre>; */
 		<article>
 			<form id="myForm" method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>">
 			<div class="row">
-				<div class="alert alert-info" role="alert"><?php if(isset($kg,$taille)){echo "Votre Imc est de ".imc($kg,$taille);} ?></div>
+			<?php 
+			 if(isset($kg,$taille) AND $kg!=null AND $taille!=null){
+				 echo "<div class='alert alert-info' role='alert'>Votre Imc est de ".imc($kg,$taille)."</div>";
+			 }else{
+				 echo "<div></div>";
+			 }
+			 
+			?>
 				<div class="radio">
 					<label class="radio-inline" >
 						<input type="radio" name="genre"  id="radWomen" value="Madame" checked> Femme
@@ -152,7 +160,7 @@ echo <pre>; */
 							<input id="liste4" name="liste4"  type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb1" value="0">
 						</div>
 						<div class="col-xs-10">
-						<b>% de sucres, farine, fÈculents </b>
+						<b>% de sucres, farine, f√©culents </b>
 						</div>
 					</div>
 					<br>
@@ -203,7 +211,7 @@ echo <pre>; */
 					<label for="nameSport">Nature du sport pratique par semaine</label>
 					<select class="form-control" id="nameSport" name="nameSport">
 					
-						<option value="viande" selected>Cardio : course a pied, vÈlo,piscine</option>
+						<option value="viande" selected>Cardio : course a pied, v√©lo,piscine</option>
 						<option value="viande2">squash</option>
 						<option value="viande3">tennis</option>
 						<option value="viande4">sport de combat</option>
@@ -260,7 +268,7 @@ echo <pre>; */
 		</aside>
         <aside>
             <h3>Le saviez-vous ?</h3>
-            <p>Les graisses stimulent la muqueuse gastrique qui s√©cr√®te une hormone qui stimule la production et la sÈcrÈtion d'enzymes digestives et, signale au cerveau que nous avons mangÈ suffisamment. Les produits laitiers ‡ 0% de matiËres grasses et autres produits ‡ 0% inhibent ce signal et peuvent vous inciter ‡ trop manger.</p>
+            <p>Les graisses stimulent la muqueuse gastrique qui s√©cr√®te une hormone qui stimule la production et la s√©cr√©tion d'enzymes digestives et, signale au cerveau que nous avons mang√© suffisamment. Les produits laitiers √† 0% de mati√®res grasses et autres produits √† 0% inhibent ce signal et peuvent vous inciter √† trop manger.</p>
 			
         </aside>
 		

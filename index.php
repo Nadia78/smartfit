@@ -41,7 +41,7 @@ if(isset($_POST['action'])){
 	
 	//$tab=array($gender,$ageRange,$meters);
 	
-	//Contrôle des données:initialisation d'un tableau d'erreurs
+	//ContrÃ´le des donnÃ©es:initialisation d'un tableau d'erreurs
 	
 	$errors=[];
 	

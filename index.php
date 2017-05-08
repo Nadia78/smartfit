@@ -9,7 +9,7 @@ class AlphaPDF extends FPDF{
 
 if(isset($_POST['action'])){
 
-	// D�claration des variables 
+	// Déclaration des variables 
 
 	//var_dump($_POST);
 	//echo "<br>";
@@ -196,7 +196,7 @@ echo <pre>; */
 					<input type="text" class="form-control" id="meters" name="meters" placeholder="168 si 1.68 m">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputPassword1">Pratiquez-vous une activite sportive ?</label>
+					<label for="exampleInputPassword1">Pratiquez-vous une activité sportive ?</label>
 	
 				<div class="radio">
 					<label class="radio-inline" >
@@ -246,7 +246,7 @@ echo <pre>; */
 						<option value="1">Grossir</option>
 						<option value="2">Muscler/Tonifier/Raffermir</option>
 						<option value="3">Etre en forme</option>
-						<option value="4">Ameliorer ma sante(digestion, douleurs musculaires, nevralgies...)</option>
+						<option value="4">Ameliorer ma sante(digestion, douleurs musculaires, névralgies...)</option>
 					</select>
 				</div>
 				<div class="checkbox">

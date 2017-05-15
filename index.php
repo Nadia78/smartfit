@@ -87,6 +87,13 @@ if(isset($_POST['action'])){
 		echo "votre imc est de".$imc;
 	}
 	//2. Calcul de la répartition de l'alimentation
+	$alimentMax=max($liste,$liste2,$liste3,$liste4);
+	
+	if($alimentMax!=null){
+		echo "L'aliment dominant est :".$alimentMax;
+	}
+	
+	
 	//3. Calcul de la duree totale d'exercice hebdomadaire
 	//4. Prise en compte de l'objectif, recommandation pertinente par rapport aux données précédentes
 // Si le tableau d'erreurs est vide 

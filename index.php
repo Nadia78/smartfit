@@ -67,6 +67,7 @@ if(isset($_POST['action'])){
 	} */
 	
 // Programme du diagnostic fitness
+	//1. Calcul imc
 
 	//echo "*".$meters."<br>";
 	//echo "..".$timeWalk."<br>";
@@ -85,7 +86,9 @@ if(isset($_POST['action'])){
 	if(isset($imc)){
 		echo "votre imc est de".$imc;
 	}
-	
+	//2. Calcul de la répartition de l'alimentation
+	//3. Calcul de la duree totale d'exercice hebdomadaire
+	//4. Prise en compte de l'objectif, recommandation pertinente par rapport aux données précédentes
 // Si le tableau d'erreurs est vide 
 
 	if(empty($errors)){

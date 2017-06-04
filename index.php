@@ -91,6 +91,7 @@ if(isset($_POST['action'])){
 	
 	if($alimentMax!=null){
 		echo "L'aliment dominant est :".$alimentMax;
+		echo $_POST['id'];
 	}
 	
 	

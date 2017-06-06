@@ -91,8 +91,8 @@ if(isset($_POST['action'])){
 	
 	if($alimentMax!=null){
 		echo "L'aliment dominant est :".$alimentMax;
-		echo $_POST['id'];
 	}
+	// TODO : recuperer l' id, name ou value de l'input
 	
 	
 	//3. Calcul de la duree totale d'exercice hebdomadaire

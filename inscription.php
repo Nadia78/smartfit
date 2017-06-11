@@ -73,6 +73,27 @@ $errors=[];
 		$errors['password']="Le mot de passe doit contenir 8 caractères alphanumériques ";
 		echo $errors['password']."<br>";
 	}
+	// affiner le format du mot de passe 
+	
+/* 	    if($password != $confirmPassword) {
+      $errors['password'] = "Les mots de passe ne sont pas les mêmes";
+    }
+    elseif(strlen($password) < 6) {
+      $errors['password'] = "Mot de passe trop court.";
+    } else {
+      // Le password contient au moins une lettre ?
+      $containsLetter = preg_match('/[a-zA-Z]/', $password);
+      // Le password contient au moins un chiffre ?
+      $containsDigit  = preg_match('/\d/', $password);
+      // Le password contient au moins un autre caractère ?
+      $containsSpecial= preg_match('/[^a-zA-Z\d]/', $password);
+
+        // Si une des conditions n'est pas remplie ... erreur
+        if(!$containsLetter || !$containsDigit || !$containsSpecial) {
+          $errors['password'] = "Choisissez un meilleur mot de passe avec au moins un 6 caractères avec une lettre, un chiffre et caractère spécial.";
+        }
+    } */
+	
 	//e) Champ password==confirmPassword
 	if($password!=$confirmPassword){
 		$errors['confirmPassword']="Les mots de passe ne sont pas identiques";

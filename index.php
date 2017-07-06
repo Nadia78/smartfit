@@ -91,6 +91,7 @@ if(isset($_POST['action'])){
 	
 	if($alimentMax!=null){
 		echo "L'aliment dominant est :".$alimentMax;
+		//return $_POST['name'];
 	}
 	// TODO : recuperer l' id, name ou value de l'input
 	

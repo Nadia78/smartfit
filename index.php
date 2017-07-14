@@ -232,7 +232,7 @@ echo <pre>; */
 					</select>
 				</div>
 				<div class="form-group">
-					<label for="timeSport">Temps consacre au sport en minutes</label>
+					<label for="timeSport">Temps consacre au sport par semaine en minutes</label>
 					<input type="text" class="form-control" id="timeSport"  name="timeSport"placeholder="60">
 				</div>
 
@@ -266,7 +266,7 @@ echo <pre>; */
 					  <input type="checkbox">souscription newsletter
 					</label>
 				</div>
-			  <button type="submit" class="btn btn-success" name="action" onclick="recupAllValues();calculateProg();">Envoyer</button>
+			  <button type="submit" class="btn btn-success" name="action" onclick="recupAllValues();calculateProg();">Afficher</button>
 			  <button type="submit" class="btn btn-success" name="generate" >Generer Pdf</button>
 			  <input id="reset" class="btn btn-success" type="reset" class="" value="Reset">
 			

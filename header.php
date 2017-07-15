@@ -54,6 +54,9 @@
             </header>
         </div>
 			<br>
+			<div id="definition">
+			<p>Smartfit est une application intelligente vous donne des recommandations en terme de nutrition et d'activité en fonction des données fournies</p>
+			</div>
 			<div id="dateHeure">
 			<script langage="Javascript">
 				var date = new Date();

@@ -258,7 +258,7 @@ echo <pre>; */
 						<option value="1">Grossir</option>
 						<option value="2">Muscler/Tonifier/Raffermir</option>
 						<option value="3">Etre en forme</option>
-						<option value="4">Ameliorer ma sante(digestion, douleurs musculaires, névralgies...)</option>
+						<option value="4">Ameliorer ma sante</option>
 					</select>
 				</div>
 				<div class="checkbox">

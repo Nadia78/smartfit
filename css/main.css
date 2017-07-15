@@ -165,9 +165,19 @@ h{
 	height:;
 	
 }
+#definition{
+	margin-top:4px;
+	margin-right:2px;
+	margin-left:2px;
+	color:blue;
+	font-size:150%;
+	font-style:italic;
+}
 #dateHeure{
+	margin-top:8px;
 	color:green;
 	font-style:normal;
+	font-size:130%;
 }
 #aside{
    display: inline-block;
@@ -177,10 +187,7 @@ h{
 	background-color:rvb(100,190,69);
 	//size: 2em;
 }
-#definition{
-	text-align:center;
-	
-}
+
 
 
 

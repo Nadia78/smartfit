@@ -55,7 +55,7 @@
         </div>
 			<br>
 			<div id="definition">
-			<p>Smartfit est une application intelligente vous donne des recommandations en terme de nutrition et d'activité en fonction des données fournies</p>
+			<center>Smartfit est une application intelligente vous donnant des recommandations personnalisees en terme de nutrition et d'activite</center>
 			</div>
 			<div id="dateHeure">
 			<script langage="Javascript">
@@ -66,6 +66,6 @@
 				var heure=date.getHours();
 				var minutes=date.getMinutes();
 				var annee = date.getFullYear();
-				document.write("Nous sommes le "+jour+"/"+mois+"/"+annee+", il est "+heure+"h"+minutes );
+				document.write("Nous sommes le "+jour+"/"+mois+"/"+annee+", il est "+heure+"h"+minutes+".");
 			</script>
 			</div>

@@ -187,6 +187,9 @@ h{
 	background-color:rvb(100,190,69);
 	//size: 2em;
 }
+#validateButton{
+	margin-bottom:12px;
+}
 
 
 

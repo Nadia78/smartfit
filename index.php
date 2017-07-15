@@ -124,11 +124,14 @@ echo <pre>; */
 			 }else{
 				 echo "<div></div>";
 			 }
-			 if($alimentMax!=null){
-				echo "<div class='alert alert-info' role='alert'>L'aliment dominant est :".$alimentMax."</div>";
-				//return $_POST['name'];
-			}
-			 
+			 if(isset($_POST['action'])){
+				if($alimentMax!=null){
+					echo "<div class='alert alert-info' role='alert'>L'aliment dominant est :".$alimentMax."</div>";
+					//return $_POST['name'];
+				}else{
+					echo "<div></div>";
+				}
+			 } 
 			?>
 				<div class="radio">
 					<label class="radio-inline" >

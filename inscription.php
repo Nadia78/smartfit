@@ -224,7 +224,7 @@ if(empty($errors))	{
 				<label for="InputTel">Téléphone</label>
 				<input type="tel" class="form-control" id="InputTel" name="tel" placeholder="">
 			  </div>
-			  <button type="submit" class="btn btn-success" name="action">Valider</button>
+			  <button type="submit" class="btn btn-success" name="action" id="validateButton">Valider</button>
 			</form>
 		</div>
 </div>

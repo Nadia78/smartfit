@@ -89,10 +89,7 @@ if(isset($_POST['action'])){
 	//2. Calcul de la répartition de l'alimentation et récupérer les labels ou intitulés des champs
 	$alimentMax=max($liste1,$liste2,$liste3,$liste4);
 	
-	if($alimentMax!=null){
-		echo "L'aliment dominant est :".$alimentMax;
-		//return $_POST['name'];
-	}
+
 	// TODO : recuperer l' id, name ou value de l'input
 	
 	
@@ -127,6 +124,10 @@ echo <pre>; */
 			 }else{
 				 echo "<div></div>";
 			 }
+			 if($alimentMax!=null){
+				echo "<div class='alert alert-info' role='alert'>L'aliment dominant est :".$alimentMax."</div>";
+				//return $_POST['name'];
+			}
 			 
 			?>
 				<div class="radio">

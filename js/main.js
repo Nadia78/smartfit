@@ -155,3 +155,14 @@ calculateProg(tab);
 
 
 //3) croisement genre + poids + taille : genre+ meters + numKg 
+
+//4) Autofocus 
+
+function autoFocus(){
+	if (document.getElementById("radWomen").checked==1){
+		document.getElementById("liste1").autofocus;
+	}
+}
+
+
+

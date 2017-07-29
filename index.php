@@ -136,10 +136,10 @@ echo <pre>; */
 			?>
 				<div class="radio">
 					<label class="radio-inline" >
-						<input type="radio" name="genre"  id="radWomen" value="Madame" checked> Femme
+						<input type="radio" name="genre"  id="radWomen" value="Madame" onClick="autoFocus();"> Femme
 					</label>
 					<label class="radio-inline">
-						<input type="radio" name="genre" id="radMen" value="Monsieur"> Homme
+						<input type="radio" name="genre" id="radMen" value="Monsieur" onClick="autoFocus();"> Homme
 					</label>
 				</div>
 				
@@ -147,7 +147,7 @@ echo <pre>; */
 					<label for="">Repartition alimentation en %</label>
 					<div class="row">
 						<div class="col-xs-2">
-							<input id="liste1" type="text" class="form-control" name="liste1" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb1" value="0" focus>
+							<input id="liste1" type="text" class="form-control" name="liste1" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb1" value="0">
 						</div>
 						<div class="col-xs-10">
 						<b>% de legumes </b>

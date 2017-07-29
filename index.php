@@ -117,7 +117,7 @@ echo <pre>; */
  <div class="main-container">
     <div class="main wrapper clearfix">
 		<article>
-			<form id="myForm" method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>">
+			<form id="myForm" method="POST" name="form" action="<?php echo $_SERVER['PHP_SELF'];?>">
 			<div class="row">
 			<?php 
 			 if(isset($kg,$taille) AND $kg!=null AND $taille!=null){
@@ -136,10 +136,10 @@ echo <pre>; */
 			?>
 				<div class="radio">
 					<label class="radio-inline" >
-						<input type="radio" name="genre"  id="radWomen" value="Madame" onClick="autoFocus();"> Femme
+						<input type="radio" name="genre"  id="radWomen" value="Madame" onclick="autoFocus();"> Femme
 					</label>
 					<label class="radio-inline">
-						<input type="radio" name="genre" id="radMen" value="Monsieur" onClick="autoFocus();"> Homme
+						<input type="radio" name="genre" id="radMen" value="Monsieur" onclick="autoFocus();"> Homme
 					</label>
 				</div>
 				
@@ -156,7 +156,7 @@ echo <pre>; */
 					<br>
 					<div class="row">
 						<div class="col-xs-2">
-							<input id="liste2" name="liste2"  type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb1" value="0">
+							<input id="liste2" name="liste2"  type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb2" value="0">
 						</div>
 						<div class="col-xs-10">
 						<b>% de proteines (viandes, poissons, oeufs...) </b>
@@ -165,7 +165,7 @@ echo <pre>; */
 					<br>
 					<div class="row">
 						<div class="col-xs-2">
-							<input id="liste3" name="liste3"  type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb1" value="0">
+							<input id="liste3" name="liste3"  type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb3" value="0">
 						</div>
 						<div class="col-xs-10">
 						<b>% de fruits </b>
@@ -174,7 +174,7 @@ echo <pre>; */
 					<br>
 					<div class="row">
 						<div class="col-xs-2">
-							<input id="liste4" name="liste4"  type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb1" value="0">
+							<input id="liste4" name="liste4"  type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb4" value="0">
 						</div>
 						<div class="col-xs-10">
 						<b>% de sucres, farine, féculents </b>
@@ -183,13 +183,13 @@ echo <pre>; */
 					<br>
 					<div class="row">
 						<div class="col-xs-2">
-							<input id="liste5" name="liste5" type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb1" value="0">
+							<input id="liste5" name="liste5" type="text" class="form-control" aria-describedby="inputSuccess3Status" placeholder=""  onchange="" ng-model="nb5" value="0">
 						</div>
 						<div class="col-xs-10">
 						Le Total doit faire 100%
 						</div>
 					</div>
-							<div class="">
+							<div class="" ng-model="">
 							<!--{{+(nb1-0)+(nb2-0)+(nb3-0)+(nb4-0)}}-->
 							<p></p>
 							</div>

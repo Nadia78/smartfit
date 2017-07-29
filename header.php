@@ -35,8 +35,9 @@
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <!--<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>-->
+		
     </head>
-    <body>
+    <body ng-app>
         <div class="header-container">
             <header class="wrapper clearfix">
                 <h1 class="title">Smartfit : le programme de fitness intelligent</h1>

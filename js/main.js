@@ -102,7 +102,7 @@ function recupAllValues(){
 		tab.push(x.elements[i].value);
 	}
 	return tab;
-	console.log(tab);
+	//console.log(tab);
 }
 function calculateProg(tableau){
 	
@@ -159,8 +159,9 @@ calculateProg(tab);
 //4) Autofocus 
 
 function autoFocus(){
-	if (document.getElementById("radWomen").checked==1){
-		document.getElementById("liste1").autofocus;
+	if (document.getElementById("radWomen").checked==true){
+		//document.getElementById("liste1").autofocus;
+		document.getElementById("liste1").setAttribute("autofocus","autofocus");
 	}
 }
 

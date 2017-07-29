@@ -33,6 +33,7 @@ if(isset($_POST['action'])){
 	$sport=trim(htmlentities($_POST['sport']));
 	$nameSport=trim(htmlentities($_POST['nameSport']));
 	$answerWalk=trim(htmlentities($_POST['answerWalk']));
+	$timeSport=trim(htmlentities($_POST['timeSport']));
 	$timeWalk=trim(htmlentities($_POST['timeWalk']));
 	$targets=trim(htmlentities($_POST['targets']));
 	
@@ -94,6 +95,9 @@ if(isset($_POST['action'])){
 	
 	
 	//3. Calcul de la duree totale d'exercice hebdomadaire
+	
+	$activite=$timeWalk+$timeSport;
+	
 	//4. Prise en compte de l'objectif, recommandation pertinente par rapport aux données précédentes
 // Si le tableau d'erreurs est vide 
 
@@ -129,6 +133,13 @@ echo <pre>; */
 				if($alimentMax!=null){
 					echo "<div class='alert alert-info' role='alert'>L'aliment dominant est :".$alimentMax."</div>";
 					//return $_POST['name'];
+				}else{
+					echo "<div></div>";
+				}
+			 } 
+			 if(isset($_POST['action'])){
+				if($alimentMax!=null){
+					echo "<div class='alert alert-info' role='alert'>Votre temps d'exercices hebdomadaire est :".$activite."</div>";
 				}else{
 					echo "<div></div>";
 				}

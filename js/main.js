@@ -160,8 +160,8 @@ calculateProg(tab);
 
 function autoFocus(){
 	if (document.getElementById("radWomen").checked==true){
-		//document.getElementById("liste1").autofocus;
-		document.getElementById("liste1").setAttribute("autofocus","autofocus");
+		document.getElementById("liste1").onchange.autofocus;
+		//document.getElementById("liste1").setAttribute("autofocus","autofocus");
 	}
 }
 

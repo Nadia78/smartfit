@@ -116,7 +116,10 @@ echo <pre>; */
 - start to create dynamic variables for pdf  generator
 
  */
- echo var_dump($_POST);
+ if($_POST!=null){
+	 echo var_dump($_POST);
+ }
+ 
 ?>
  <div class="main-container">
     <div class="main wrapper clearfix">

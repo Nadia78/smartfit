@@ -7,7 +7,7 @@ if(isset($_POST['action'])){
 	
 //var_dump($_POST);
 
-//1)=============Déclaration des variables=======================
+//1)=============DÃ©claration des variables=======================
 
 $genre=trim(htmlentities(isset($_POST['genre'])));
 $firstname=trim(htmlentities($_POST['firstname']));
@@ -30,21 +30,21 @@ $errors=[];
 } */
 
 //3)============= Traitement des erreurs============================
-	//a) Champ civilité
+	//a) Champ civilitÃ©
 	if(empty($_POST['genre'])){
 		
-		$errors['genre']="la civilité n'est pas renseignée";
+		$errors['genre']="la civilitÃ© n'est pas renseignÃ©e";
 		echo $errors['genre']."<br>";
 	}
 	//b) Champ prenom et nom : filter var et strlen/ preg match 
 	if(empty($lastname||$firstname)){
-		$errors['identity']="Le nom ou le prénom n'ont pas été renseigné";
+		$errors['identity']="Le nom ou le prÃ©nom n'ont pas Ã©tÃ© renseignÃ©";
 		echo $errors['identity']."<br>";
 	}elseif(ctype_alpha($lastname)===false||ctype_alpha($firstname)===false){
 		$errors['string_name']="le format du nom ou prenom n'est pas conforme";
 		echo $errors['string_name']."<br>";
 	}elseif(strlen($firstname)<4 || strlen($lastname)<4 ||strlen($firstname)>20 ||strlen($lastname)>20){
-		$errors['strenth']="la taille du nom ou du prénom n'est pas conforme";
+		$errors['strenth']="la taille du nom ou du prÃ©nom n'est pas conforme";
 		echo $errors['strenth']."<br>";
 	}
 	//c) Champ email : filter var email 
@@ -54,11 +54,11 @@ $errors=[];
 	}elseif(empty($email)){
 		$errors['emptyEmail']="Merci de communiquer votre adresse email";
 	}else{
-		// Je vérifie si l'email n'existe pas déjà dans la bdd
+		// Je vÃ©rifie si l'email n'existe pas dÃ©jÃ© dans la bdd
 		$query=$pdo->prepare('SELECT email FROM users WHERE email = :email');
 		$query->bindValue(':email',$email,PDO::PARAM_STR);
 		$query->execute();
-		// Je récupère le résultat de la bdd Sql
+		// Je rÃ©cupÃ¨re le rÃ©sultat de la bdd Sql
 		$resultEmail=$query->fetch();
 		
 	if($resultEmail['email']){
@@ -70,13 +70,13 @@ $errors=[];
 	//d) Champ password regex ou preg match
 	if(!
 	preg_match('/[a-zA-Z0-9]{8}/',$password)){
-		$errors['password']="Le mot de passe doit contenir 8 caractères alphanumériques ";
+		$errors['password']="Le mot de passe doit contenir 8 caractÃ¨res alphanumÃ©riques ";
 		echo $errors['password']."<br>";
 	}
 	// affiner le format du mot de passe 
 	
 /* 	    if($password != $confirmPassword) {
-      $errors['password'] = "Les mots de passe ne sont pas les mêmes";
+      $errors['password'] = "Les mots de passe ne sont pas les mÃªmes";
     }
     elseif(strlen($password) < 6) {
       $errors['password'] = "Mot de passe trop court.";
@@ -85,12 +85,12 @@ $errors=[];
       $containsLetter = preg_match('/[a-zA-Z]/', $password);
       // Le password contient au moins un chiffre ?
       $containsDigit  = preg_match('/\d/', $password);
-      // Le password contient au moins un autre caractère ?
+      // Le password contient au moins un autre caractÃ¨re ?
       $containsSpecial= preg_match('/[^a-zA-Z\d]/', $password);
 
         // Si une des conditions n'est pas remplie ... erreur
         if(!$containsLetter || !$containsDigit || !$containsSpecial) {
-          $errors['password'] = "Choisissez un meilleur mot de passe avec au moins un 6 caractères avec une lettre, un chiffre et caractère spécial.";
+          $errors['password'] = "Choisissez un meilleur mot de passe avec au moins un 6 caractÃ¨res avec une lettre, un chiffre et caractère spécial.";
         }
     } */
 	
@@ -101,7 +101,7 @@ $errors=[];
 	}
 	//f) Champ address strlen
 	if(strlen($address)>60){
-		$errors['address']="L'adresse indiquée est trop longue";
+		$errors['address']="L'adresse indiquÃ©e est trop longue";
 		echo $errors['address']."<br>";
 	}
 	//g) Champ	cp ctype digit
@@ -114,13 +114,13 @@ $errors=[];
 		$errors['town']="La ville doit contenir uniquement des lettres";
 		echo $errors['town']."<br>";
 	}elseif(strlen($town)>20){
-		$errors['town']="Le nom de la ville est limité à 20 lettres";
+		$errors['town']="Le nom de la ville est limitÃ© Ã  20 lettres";
 		echo $errors['town']."<br>";
 	}
-	//i) Validation du numéro de téléphone
+	//i) Validation du numÃ©ro de tÃ©lÃ©phone
 	
 	if(!preg_match('/^0[0-9]{9}/',$tel)){
-		$errors['tel']="Le numéro du téléphone doit commencer par 0, 00 ou + et doit contenir des chiffres";
+		$errors['tel']="Le numÃ©ro du tÃ©lÃ©phone doit commencer par 0, 00 ou + et doit contenir des chiffres";
 		echo $errors['tel'];
 	}
 //4)Si pas d'erreurs, insertion dans la bdd
@@ -130,7 +130,7 @@ $errors=[];
 if(empty($errors))	{
 	// hasher le password
 	$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-	// Le tableau d'erreurs est vide, insérer les informations de l'utilisateur dans la bdd
+	// Le tableau d'erreurs est vide, insÃ©rer les informations de l'utilisateur dans la bdd
 	//users(nom_colonnes) values($)
 	$query=$pdo->prepare('INSERT INTO users(gender,firstname,lastname,email,password,address,cp,town,tel) VALUES(:gender,:firstname,:lastname,:email,
 	:password,
@@ -154,10 +154,10 @@ if(empty($errors))	{
 	$query->execute();
 	
 	if($query){
-		echo '<div class="alert alert-success" role="alert">Bravo ! Vous avez bien été enregistré !</div>';
+		echo '<div class="alert alert-success" role="alert">Bravo ! Vous avez bien Ã©tÃ© enregistrÃ© !</div>';
 	}
 	if($query->rowCount()>0){
-		// Récupérer l'utilisateur dans la bdd pou l'affecter à une valeur de session
+		// RÃ©cupÃ©rer l'utilisateur dans la bdd pou l'affecter Ã  une valeur de session
 		$query=$pdo->prepare('SELECT * FROM users WHERE id=:id');
 		$query=bindValue(':id',$pdo->lastInsertId(),PDO::PARAM_INT);
 		$query->execute();
@@ -167,7 +167,7 @@ if(empty($errors))	{
 		unset($resultUser['password']);
 		$_SESSION['users']=$resultUser;
 		
-		//on redirige l'internaute vers la page protégée catalogue.php
+		//on redirige l'internaute vers la page protÃ©gÃ©e catalogue.php
 		header("Location: catalogue.php");
 		die();	
 	}

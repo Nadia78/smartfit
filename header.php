@@ -46,7 +46,7 @@
                         <li><a href="index.php">Accueil</a></li>
                         <li><a href="inscription.php">Inscription</a></li>
 						<?php if($url=="/smartfit/catalogue.php"){
-							echo '<li><a href="logout.php">D�connexion</a></li>';
+							echo '<li><a href="logout.php">Déconnexion</a></li>';
 						}else{
 							echo '<li><a href="connexion.php">Connexion</a></li>';
 						}?>		
@@ -56,7 +56,7 @@
         </div>
 			<br>
 			<div id="definition">
-			<center>Smartfit est une application intelligente vous donnant des recommandations personnalisees en terme de nutrition et d'activite</center>
+			<center>Smartfit est une application intelligente vous donnant des recommandations personnalisées en terme de nutrition et d'activite</center>
 			</div>
 			<div id="dateHeure">
 			<script langage="Javascript">
